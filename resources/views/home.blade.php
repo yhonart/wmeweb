@@ -233,7 +233,7 @@
 <!-- End Instagram Post -->
 <!-- Client -->
 <section id="Client" class="mb-5">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col">
                 <h2 class="fw-bold lh-1 text-primary text-center title">Pelanggan Kami</h2>
@@ -244,10 +244,21 @@
             <div class="col-12">
                 <div class="customers-brand">
                     @foreach($wmeclient as $wmec)
-                        <div>
+                        <div class="text-center">
                             <img src="{{asset('images/customers')}}/{{$wmec->client_img_name}}.{{$wmec->client_img_type}}" alt="" class="img-fluid">
                         </div>
-                    @endforeach
+                    @endforeach                    
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="customers-brand">
+                    @foreach($wmeclient2 as $wmecs)
+                        <div class="text-center">
+                            <img src="{{asset('images/customers')}}/{{$wmecs->client_img_name}}.{{$wmecs->client_img_type}}" alt="" class="img-fluid">
+                        </div>
+                    @endforeach                    
                 </div>
             </div>
         </div>

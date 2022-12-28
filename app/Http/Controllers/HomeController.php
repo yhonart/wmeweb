@@ -25,9 +25,14 @@ class HomeController extends Controller
     public function index()
     {
         $wmeclient = DB::table('wme_client')
+            ->where('client_colom_view','1')
+            ->orderBy('client_img_name','asc')
+            ->get();
+        $wmeclient2 = DB::table('wme_client')
+            ->where('client_colom_view','2')
             ->orderBy('client_img_name','asc')
             ->get();
 
-        return view('home', compact('wmeclient'));
+        return view('home', compact('wmeclient','wmeclient2'));
     }
 }

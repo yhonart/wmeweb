@@ -9,8 +9,7 @@
 
     <title>PT. Wahyu Mustika Engineering</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- Scripts -->    
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">    
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -22,7 +21,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-md fixed-top navbar-light animate__animated animate__fadeInDown navbar-on-top">
-        <div class="container">
+        <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="{{asset('images/wme_logo.png')}}" alt="" srcset="" class="img-fluid" style="max-width:100px">
             </a>
@@ -53,6 +52,7 @@
     <main>
         @yield('content')
     </main>
+    <script src="{{ asset('js/app.js') }}" defer></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="{{asset('bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('aos-master/dist/aos.js')}}"></script>
@@ -111,11 +111,11 @@
                     breakpoint: 400,
                     settings: {
                         arrows: false,
-                        slidesToShow: 1,
+                        slidesToShow: 2,
                         slidesToScroll: 1
                     }
                 }]
-            });
+            });            
         });
     </script>
 </body>
