@@ -34,14 +34,14 @@
   min-height: 300px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 19px 38px rgba(15, 23, 42, 0.3), 0 15px 12px rgba(15, 23, 42, 0.2);
-  border-radius: 15px 50px 30px 5px;
+  box-shadow: 0 19px 38px rgba(15, 23, 42, 0.3);
+  border-radius: 15px;
 }
 .card-services .wrapper:hover .data {
   transform: translateY(0);
 }
 .card-services .data {
-  background-color: rgba(0, 2, 161, 0.3);
+  background-color: rgba(234, 253, 252, 0.7);
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
   position: absolute;
@@ -77,7 +77,7 @@
   opacity: 1;
 }
 .example-2 .header {
-  color: #fff;
+  color: #0f172a;
   padding: 1em;
 }
 .example-2 .header::before, .example-2 .header::after {
@@ -103,11 +103,11 @@
   opacity: 0;
 }
 .example-2 .data {
-  color: #fff;
+  color: #0f172a;
   transform: translateY(calc(70px + 4em));
 }
 .example-2 .title a {
-  color: #fff;
+  color: #0f172a;
 }
 .example-2 .button {
   display: block;

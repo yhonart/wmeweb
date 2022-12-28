@@ -107,12 +107,12 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-3">
                 <div class="example-2 card-services mt-4" data-aos="zoom-in-up">
                     <div class="wrapper" style="background: url({{asset('images/services/1.png')}}) center / cover no-repeat;">                        
                         <div class="data">
                             <div class="content">
-                                <h4 class="title"><a href="#">Mechanical</a></h4>
+                                <h5 class="title"><a href="#">Mechanical</a></h5>
                                 <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
                                 <a href="#" class="button">Selengkapnya</a>
                             </div>
@@ -120,12 +120,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-3">
                 <div class="example-2 card-services mt-4" data-aos="zoom-in-up">
                     <div class="wrapper" style="background: url({{asset('images/services/2.jpg')}}) center / cover no-repeat;">
                         <div class="data">
                             <div class="content">
-                                <h4 class="title"><a href="#">Electrical</a></h4>
+                                <h5 class="title"><a href="#">Electrical</a></h5>
                                 <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
                                 <a href="#" class="button">Selengkapnya</a>
                             </div>
@@ -133,12 +133,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-3">
                 <div class="example-2 card-services mt-4" data-aos="zoom-in-up">
                     <div class="wrapper" style="background: url({{asset('images/services/3.jpg')}}) center / cover no-repeat;">
                         <div class="data">
                             <div class="content">
-                                <h4 class="title"><a href="#">Manufacture Industries</a></h4>
+                                <h5 class="title"><a href="#">Manufacture Industries</a></h5>
                                 <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
                                 <a href="#" class="button">Selengkapnya</a>
                             </div>
@@ -146,12 +146,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-3">
                 <div class="example-2 card-services mt-4" data-aos="zoom-in-up">
                     <div class="wrapper" style="background: url({{asset('images/services/5.png')}}) center / cover no-repeat;">
                         <div class="data">
                             <div class="content">
-                                <h4 class="title"><a href="#">Marine</a></h4>
+                                <h5 class="title"><a href="#">Marine</a></h5>
                                 <p class="text">The antsy bingers of Netflix will eagerly anticipate the digital release of the Survive soundtrack, out today.</p>
                                 <a href="#" class="button">Selengkapnya</a>
                             </div>

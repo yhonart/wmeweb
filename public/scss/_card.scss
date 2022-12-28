@@ -38,8 +38,8 @@
         min-height: 300px;
         position: relative;
         overflow: hidden;
-        box-shadow: 0 19px 38px rgba($black, 0.3), 0 15px 12px rgba($black, 0.2);
-        border-radius: 15px 50px 30px 5px;
+        box-shadow: 0 19px 38px rgba($black, 0.3);
+        border-radius: 15px;
         &:hover {
         .data {
             transform: translateY(0);
@@ -47,7 +47,7 @@
         }
     }
     .data {
-        background-color: rgba(0, 2, 161, .3);  
+        background-color: rgba(234, 253, 252, .7);  
         backdrop-filter: blur(6px);
         position: absolute;
         bottom: 0;
@@ -91,7 +91,7 @@
     }
     .header {
         @include cf;
-        color: $white;
+        color: $black;
         padding: 1em;
         .date {
         float: left;
@@ -110,12 +110,12 @@
         }
     }
     .data {
-        color: $white;
+        color: $black;
         transform: translateY(calc(70px + 4em));
     }
     .title {
         a {
-        color: $white;
+        color: $black;
         }
     }
     .button {
