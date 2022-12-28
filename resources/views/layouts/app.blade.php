@@ -21,7 +21,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-md fixed-top navbar-light animate__animated animate__fadeInDown navbar-on-top">
-        <div class="container-fluid">
+        <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="{{asset('images/wme_logo.png')}}" alt="" srcset="" class="img-fluid" style="max-width:100px">
             </a>

@@ -266,7 +266,7 @@
 </section>
 <!-- Kontak -->
 <section id="contact" class="mb-5 site-product">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col">
                 <h2 class="fw-bold lh-1 text-primary text-center title">Hubungi Kami</h2>
