@@ -44,7 +44,7 @@
 <body>
     <div class="overlay" id="overlay">
         <div class="putar animate__animated animate__zoomIn">
-            <img src="{{asset('images/wme_logo.png')}}" alt="" height="160">
+            <img src="{{asset('images/wme_logo.png')}}" alt="" height="160" class="img-fluid">
         </div>
     </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
