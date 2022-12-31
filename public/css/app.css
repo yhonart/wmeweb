@@ -5,8 +5,11 @@
 
 body :{
     font-family: 'Poppins', sans-serif;
-    padding-bottom: 20px;
     background-color: #eff6ff;
+}
+/* color */
+.bg-blue-800 {
+    background-color:#1e40af;
 }
 /* Carousel */
 .bd-placeholder-img {
@@ -131,4 +134,18 @@ body :{
     transition: 0.3s;
     border-radius: 20px;
     backdrop-filter: blur(5px);
+}
+
+.card-daz img {
+    position:relative;
+    width: 100%;
+    backdrop-size:cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:20px;
+}
+
+.card-daz .card-body {
+    color:#f8fafc;
 }
