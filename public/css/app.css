@@ -64,11 +64,11 @@ body :{
 }
 
 .navbar-on-top{    
-    background-color: #eff6ff;
+    background-color: #111827;
 }
 
 .navbar-on-top a {
-    color:#0f172a;
+    color:#f9fafb;
 }
 .bd-placeholder-img {
     font-size: 1.125rem;
@@ -106,7 +106,7 @@ body :{
 .site-product::before {
     content: "";
     position: absolute;
-    background: rgba(24, 29, 49, 0.7);
+    background: rgba(108, 0, 255, 0.6);
     left: 0;
     right: 0;
     top: 0;
@@ -118,6 +118,12 @@ body :{
     position: relative;
     max-width: 250px;
     height: 250px;
+}
+
+.stie-product .lead {
+    position: relative;
+    margin-top:40px;
+    margin-bottom:20px;
 }
 /* the slides */
 .slick-slide {
@@ -149,4 +155,16 @@ body :{
 
 .card-daz .card-body {
     color:#f8fafc;
+}
+blockquote{
+    margin-left: calc(50% - 306px);
+    margin-left: -webkit-calc(50% - 306px);
+    margin-left: -moz-calc(50% - 306px);
+}
+
+@media only screen and (max-width: 612px) {
+    blockquote{
+        margin-left: 0;
+        width:100%;              
+    }
 }

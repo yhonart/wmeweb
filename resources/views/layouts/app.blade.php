@@ -3,12 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>PT. Wahyu Mustika Engineering</title>
-
     <!-- Scripts -->    
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">    
     <!-- Styles -->
@@ -17,7 +14,7 @@
     <link href="{{ asset('css/carousel.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset('slick/slick.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('slick/slick-theme.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('icons/fonts/bootstrap-icons.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('icons/font/bootstrap-icons.css')}}">
     <style>
         .putar{
             width: 150px;
@@ -37,7 +34,7 @@
             position: fixed;
             left: 0;
             top: 0;
-            z-index: 2;
+            z-index: 20;
         }
     </style>
 </head>
@@ -47,7 +44,7 @@
             <img src="{{asset('images/wme_logo.png')}}" alt="" height="160" class="img-fluid">
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-on-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="{{asset('images/wme_logo.png')}}" alt="Bootstrap" height="60">
@@ -56,28 +53,35 @@
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown link
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            @lang('company.navbar.about')
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-dark" href="#">@lang('company.aboutdown.kebijakan')</a></li>
+                            <li><a class="dropdown-item text-dark" href="#">@lang('company.aboutdown.struktur')</a></li>
+                            <li><a class="dropdown-item text-dark" href="#">@lang('company.aboutdown.sertifikat')</a></li>
+                        </ul>
+                    </li>                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">@lang('company.navbar.service')</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">@lang('company.navbar.news')</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">@lang('company.navbar.contact')</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">@lang('company.navbar.carier')</a>
+                    </li>  
                 </ul>
-                </li>
-            </ul>
-            </div>
+                <div class="p-2">
+                    <a href="lang/en" class="navbar-text p-1"><img src="{{asset('images/icon/united-kingdom-box.png')}}" alt="" srcset="" class="img-fluid" style="max-width:25px;"></a>                 
+                    <a href="lang/id" class="navbar-text p-1"><img src="{{asset('images/icon/indonesia.png')}}" alt="" srcset="" class="img-fluid" style="max-width:30px;"></a>
+                </div>
+            </div>            
         </div>
     </nav>
     <main>
@@ -149,13 +153,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="{{asset('slick/slick.js')}}" type="text/javascript" charset="utf-8"></script>
-    <script>
-        $(document).ready(function(){ 
-            setTimeout(function(){ $('.overlay').fadeOut(); },2000); 
+    <script>        
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
         });
         AOS.init({
             once: true,
-            duration: 4000,
+            duration: 2000,
         });
         $(document).ready(function(){
             $('.news-and-project').slick({
@@ -209,6 +215,9 @@
                     }
                 }]
             });            
+        });
+        $(document).ready(function(){ 
+            setTimeout(function(){ $('.overlay').fadeOut(); },2000); 
         });
     </script>
 </body>

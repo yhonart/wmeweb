@@ -16,5 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
-
+if (file_exists(app_path('Http/Controllers/LocalizationController.php')))
+{
+    Route::get('lang/{locale}', [App\Http\Controllers\LocalizationController::class , 'lang']);
+}
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
