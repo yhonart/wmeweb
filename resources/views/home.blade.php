@@ -64,7 +64,7 @@
                     <div class="col-8">
                         <div class="card bg-warning" data-aos="fade-right">                            
                             <div class="card-body">
-                                <span class="fs-7 fw-bold">Jaminan Kualitas Yang Baik</span>
+                                <span class="fs-7 fw-bold">@lang('company.goodquality')</span>
                             </div>
                         </div>
                     </div>
@@ -73,7 +73,7 @@
                     <div class="col-8">
                         <div class="card bg-warning" data-aos="fade-right">                            
                             <div class="card-body">
-                                <span class="fs-7 fw-bold">Pengiriman Tepat Waktu</span>                                
+                                <span class="fs-7 fw-bold">@lang('company.delivery')</span>                                
                             </div>
                         </div>
                     </div>
@@ -82,19 +82,19 @@
                     <div class="col-8">
                         <div class="card bg-warning" data-aos="fade-right">                            
                             <div class="card-body">
-                                <span class="fs-7 fw-bold">Harga Yang Bersaing</span>
+                                <span class="fs-7 fw-bold">@lang('company.prices')</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 text-left mt-5">
-                <h5 class="fs-5 fw-bold lh-4 text-primary" data-aos="fade-right">Kami Berpengalaman</h5>
-                <p class="fs-7 fw-5 px-4 text-muted" data-aos="fade-right">Kami telah banyak mengerjakan dalam bidang mechanical, electrical, manufacture industri dan juga banyak melakukan pekerjaan-pekerjaan di bidang marine. Sehingga tidak ada lagi keraguan anda untuk memilih kami</p>
-                <h5 class="fs-5 fw-bold lh-4 text-primary" data-aos="fade-right">Mempunyai Tim Terbaik</h5>
-                <p class="fs-7 fw-5 px-4 text-muted" data-aos="fade-right">Kami menempatkan Tim terbaik pada semua proyek yang dikerjakan, kami tahu betul untuk mewujudkan sebuah mimpi yang besar memerlukan orang-orang yang terbaik di bidangnya.</p>
-                <h5 class="fs-5 fw-bold lh-4 text-primary" data-aos="fade-right">Inovasi & Komunikasi</h5>
-                <p class="fs-7 fw-5 px-4 text-muted" data-aos="fade-right">Dalam setiap pekerjaan kami selalu melakukan inovasi dan melakukan komunikasi yang baik kepada pelanggan kami agar dapat tercipta hasil yang terbaik untuk anda.</p>
+                <h5 class="fs-5 fw-bold lh-4 text-primary" data-aos="fade-right">@lang('company.experienced')</h5>
+                <p class="fs-7 fw-5 px-4 text-muted" data-aos="fade-right">@lang('company.leadexperienced')</p>
+                <h5 class="fs-5 fw-bold lh-4 text-primary" data-aos="fade-right">@lang('company.thebesttean')</h5>
+                <p class="fs-7 fw-5 px-4 text-muted" data-aos="fade-right">@lang('company.leadthebesttean')</p>
+                <h5 class="fs-5 fw-bold lh-4 text-primary" data-aos="fade-right">@lang('company.innovation')</h5>
+                <p class="fs-7 fw-5 px-4 text-muted" data-aos="fade-right">@lang('company.leadinnovation')</p>
             </div>
         </div>
     </div>
@@ -116,6 +116,11 @@
                 <p class="fs-7 fw-5" data-aos="fade-right">
                     <span class="fw-bold text-primary">Visi & Misi Kami</span> Menjadi partner terbaik bagi perusahaan-perusahaan di seluruh dunia merupakan visi kami. Dan selangkah demi selangkah, kami coba meriahnya melalui tiga misi utama, yaitu Jaminan Kualitas, Pengiriman Tepat Waktu dan Harga Yang Bersaing.
                 </p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <a href="#" class="btn btn-blue-800 fw-bold">@lang('company.readmore')</a>
             </div>
         </div>
     </div>
@@ -226,7 +231,7 @@
             <div class="col-md-12">
                 <div class="news-and-project">
                     <div class="card card-daz">
-                        <img src="{{asset('images/portfolio/p2.png')}}" alt="...">
+                        <img src="{{asset('images/portfolio/P2.png')}}" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Nama Project</h5>
                             <p class="card-text">Penjelasan singkat project</p>
@@ -234,7 +239,7 @@
                         </div>
                     </div>
                     <div class="card card-daz">
-                        <img src="{{asset('images/portfolio/p4.png')}}" alt="...">
+                        <img src="{{asset('images/portfolio/P4.png')}}" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Nama Project</h5>
                             <p class="card-text">Penjelasan singkat project</p>
@@ -242,7 +247,7 @@
                         </div>
                     </div>
                     <div class="card card-daz">
-                        <img src="{{asset('images/portfolio/p5.png')}}" alt="...">
+                        <img src="{{asset('images/portfolio/P5.png')}}" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Nama Project</h5>
                             <p class="card-text">Penjelasan singkat project</p>
@@ -250,7 +255,7 @@
                         </div>
                     </div>
                     <div class="card card-daz">
-                        <img src="{{asset('images/portfolio/p6.png')}}" alt="...">
+                        <img src="{{asset('images/portfolio/P6.png')}}" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Nama Project</h5>
                             <p class="card-text">Penjelasan singkat project</p>

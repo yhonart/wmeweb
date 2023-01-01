@@ -21,6 +21,15 @@
         "readmore" => "Read More",
         "why" => "Why Choose Us",
         "whyreasons" => "The reason why your company chose us",
+        "goodquality" => "Good Quality Guarantee",
+        "delivery" => "Timely Delivery",
+        "prices" => "Competitive Prices",
+        "experienced" => "We are Experienced",
+        "leadexperienced" => "We have done a lot of work in the fields of mechanical, electrical, industrial manufacture and also done a lot of work in the marine sector. So there is no more doubt for you to choose us",
+        "thebesttean" => "Having the best team",
+        "leadthebesttean" => "We put the best team on all the projects we work on, we know very well that realizing a big dream requires the best people in their fields.",
+        "innovation" => "Creative and innovative",
+        "leadinnovation" => "In every job we always innovate and communicate well with our customers so that the best results can be created for you.",
         "thank" => "Thank you for your contribution.",
     ];
 ?>

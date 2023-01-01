@@ -11,6 +11,16 @@ body :{
 .bg-blue-800 {
     background-color:#1e40af;
 }
+
+.btn-blue-800 {
+    background-color:#1e40af;
+    color:#f8fafc;
+}
+
+.btn-blue-800:hover {
+    background-color:#dbeafe;
+    color:#1e3a8a;
+}
 /* Carousel */
 .bd-placeholder-img {
     font-size: 1.125rem;

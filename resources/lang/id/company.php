@@ -21,6 +21,15 @@
         "ourservices" => "Cek Layanan Kami",
         "why" => "Mengapa Memilih Kami",
         "whyreasons" => "Alasan mengapa perusahaan anda memilih kami",
+        "goodquality" => "Jaminan Kualitas Yang Baik",
+        "delivery" => "Pengiriman Tepat Waktu",
+        "prices" => "Harga Yang Bersaing",
+        "experienced" => "Kami Berpengalaman",
+        "leadexperienced" => "Kami telah banyak mengerjakan dalam bidang mechanical, electrical, manufacture industri dan juga banyak melakukan pekerjaan-pekerjaan di bidang marine. Sehingga tidak ada lagi keraguan anda untuk memilih kami.",
+        "thebesttean" => "Mempunyai Tim Terbaik",
+        "leadthebesttean" => "Kami menempatkan Tim terbaik pada semua proyek yang dikerjakan, kami tahu betul untuk mewujudkan sebuah mimpi yang besar memerlukan orang-orang yang terbaik di bidangnya.",
+        "innovation" => "Kreatif dan Berkomunikasi ",
+        "leadinnovation" => "Dalam setiap pekerjaan kami selalu melakukan inovasi dan melakukan komunikasi yang baik kepada pelanggan kami agar dapat tercipta hasil yang terbaik untuk anda.",
         "thank" => "Thank you for your contribution.",
     ];
 ?>
