@@ -21,8 +21,10 @@
                 <h4 class="fw-bold text-primary title" data-aos="fade-up">@lang('company.navbar.about')</h4>
             </div>
         </div>
-        <div class="d-flex flex-column flex-sm-row justify-content-center">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/jDLuJLoaA_g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="row">
+            <div class="col-12 d-flex flex-column flex-sm-row justify-content-center">
+                <iframe class="youtube-embade" src="https://www.youtube.com/embed/jDLuJLoaA_g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
         </div>
         <div class="row mt-5">
             <div class="col-12">

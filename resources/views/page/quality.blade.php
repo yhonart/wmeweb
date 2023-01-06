@@ -23,8 +23,12 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 col-12">
-                <img src="{{asset('images/quality.png')}}" alt="" srcset="" class="img-daz">
+            <div class="col-md-6 col-12" style="background: url({{asset('images/quality2.png')}}) center / cover no-repeat;">
+                <div class="row mt-5">
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="fs-2 fw-bold text-light">Quality Policy</div>
+                    </div>
+                </div>
             </div>
             <div class="col-md-6 col-12">
                 <div data-aos="fade-right">
@@ -32,6 +36,14 @@
                         print $quality->about_desc;
                     @endphp
                 </div>
+            </div>
+        </div>
+        <div class="row mt-5 border-top">
+            <div class="col-12 d-flex justify-content-center">
+                <a href="" class="btn btn-light btn-sm ms-2 mt-1">@lang('company.qms')</a>
+                <a href="" class="btn btn-light btn-sm ms-2 mt-1">@lang('company.komitmen')</a>
+                <a href="" class="btn btn-light btn-sm ms-2 mt-1">@lang('company.fokus')</a>
+                <a href="" class="btn btn-light btn-sm ms-2 mt-1">@lang('company.tinjauan')</a>
             </div>
         </div>
     </div>

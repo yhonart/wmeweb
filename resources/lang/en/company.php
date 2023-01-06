@@ -36,5 +36,9 @@
         "newsandproject" => "News & Projects",
         "contactquestion" => "You have a question ?",
         "contactquestiondesc" => "Our team is ready to provide an explanation. Contact us via WhatsApp or email.",
+        "qms" => "Quality Management System",
+        "komitmen" => "Management Commitment",
+        "fokus" => "Customer Focus",
+        "tinjauan" => "Management Review",
     ];
 ?>

@@ -195,13 +195,20 @@ blockquote{
     margin-left: -moz-calc(50% - 306px);
 }
 
+.youtube-embade{
+    width: 560px;
+    height: 315px;
+}
 @media only screen and (max-width: 612px) {
     blockquote{
         margin-left: 0;
         width:100%;              
     }
+    .youtube-embade{
+        width: auto;
+        height: auto;
+    }
 }
-
 .img-daz{
     border-radius: 0px 50px 0px 50px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);

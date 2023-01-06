@@ -36,5 +36,9 @@
         "newsandproject" => "Berita & Gallery Proyek",
         "contactquestion" => "Anda memiliki pertanyaan ?",
         "contactquestiondesc" => "Tim kami siap memberikan penjelasannya. Hubungi kami melalui whatsaap atau email kami.",
+        "qms" => "System Manajemen Mutu",
+        "komitmen" => "Komitmen Manajemen",
+        "fokus" => "Fokus Pada Pelanggan",
+        "tinjauan" => "Tinjauan Manajemen",
     ];
 ?>
