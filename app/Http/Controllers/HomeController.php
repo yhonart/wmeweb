@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\App;
 
 class HomeController extends Controller
 {
@@ -24,6 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $locale = App::currentLocale();
         $wmeclient = DB::table('wme_client')
             ->where('client_colom_view','1')
             ->orderBy('client_img_name','asc')
@@ -32,7 +34,19 @@ class HomeController extends Controller
             ->where('client_colom_view','2')
             ->orderBy('client_img_name','asc')
             ->get();
+        $project = DB::table('wme_project')
+            ->where('lang',$locale)
+            ->get();
+        $aboutus = DB::table('wme_about_us')
+            ->where([
+                ['lang',$locale],
+                ['page_code','AM'],
+                ])
+            ->first();
+        $vision = DB::table('wme_vision')
+            ->where('lang',$locale)
+            ->first();
 
-        return view('home', compact('wmeclient','wmeclient2'));
+        return view('home', compact('wmeclient','wmeclient2','project','aboutus','vision'));
     }
 }

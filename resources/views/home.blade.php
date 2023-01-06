@@ -103,24 +103,28 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-12 text-center">
-                <h4 class="fw-bold text-primary title" data-aos="fade-up">Tentang Kami</h4>
+                <h4 class="fw-bold text-primary title" data-aos="fade-up">@lang('company.navbar.about')</h4>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col-lg-6 col-12 text-center">
                 <p class="fs-7 fw-5" data-aos="fade-right">
-                    <span class="fw-bold text-primary">PT. Wahyu Mustika Engineering</span> adalah sebuah perusahaan Engineering, Contracting & Supplier. Kami menawarkan jasa engineering, procurement, contructing & maintenance dalam bidang electrical dan automation dalam proses pembangunan industry juga pembangunan gedung komersial.
+                    @php
+                        print $aboutus->about_desc;
+                    @endphp
                 </p>
             </div>
             <div class="col-lg-6 col-12 text-center">
                 <p class="fs-7 fw-5" data-aos="fade-right">
-                    <span class="fw-bold text-primary">Visi & Misi Kami</span> Menjadi partner terbaik bagi perusahaan-perusahaan di seluruh dunia merupakan visi kami. Dan selangkah demi selangkah, kami coba meriahnya melalui tiga misi utama, yaitu Jaminan Kualitas, Pengiriman Tepat Waktu dan Harga Yang Bersaing.
+                    @php
+                        print $vision->vision_desc;
+                    @endphp
                 </p>
             </div>
         </div>
         <div class="row mt-5">
             <div class="col-12 text-center">
-                <a href="#" class="btn btn-blue-800 fw-bold">@lang('company.readmore')</a>
+                <a href="aboutme" class="btn btn-blue-800 fw-bold">@lang('company.readmore')</a>
             </div>
         </div>
     </div>
@@ -129,8 +133,7 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-12 text-center">
-                <h4 class="fw-bold text-light title" data-aos="fade-up">Produk & Layanan</h4>
-                <p class="lead text-light" data-aos="fade-up">Kami memiliki produk dan layanan</p>
+                <h4 class="fw-bold text-light title" data-aos="fade-up">@lang('company.navbar.service')</h4>
             </div>
         </div>
         <div class="row">
@@ -193,7 +196,7 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-12 text-center">
-                <h4 class="fw-bold text-primary title" data-aos="fade-up">Pelanggan Kami</h4>
+                <h4 class="fw-bold text-primary title" data-aos="fade-up">@lang('company.ourcustomers')</h4>
             </div>
         </div>
         <div class="row mt-5">
@@ -220,48 +223,28 @@
         </div>
     </div>
 </section>
-<section id="News">
-    <div class="container-fluid site-product">
+<section id="News" class="site-product">
+    <div class="container">
         <div class="row mt-5">
             <div class="col-12 text-center">
-                <h4 class="fw-bold text-warning title" data-aos="fade-up">Proyek & Berita</h4>
+                <h4 class="fw-bold text-warning title" data-aos="fade-up">@lang('company.newsandproject')</h4>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col-md-12">
                 <div class="news-and-project">
-                    <div class="card card-daz">
-                        <img src="{{asset('images/portfolio/P2.png')}}" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Nama Project</h5>
-                            <p class="card-text">Penjelasan singkat project</p>
-                            <a href="#" class="btn btn-primary">Selengkapnya</a>
+                    @foreach($project as $p)
+                        <div>
+                            <div class="card-daz-header">
+                                <img src="{{asset('images/portfolio')}}/{{$p->img_cover}}" alt="...">
+                            </div>
+                            <div class="card-daz-body mt-4">
+                                <h5 class="card-title">{{$p->project_name}}</h5>
+                                <p class="card-text">{{$p->project_desc}}</p>
+                                <a href="#" class="btn btn-primary">Selengkapnya</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card card-daz">
-                        <img src="{{asset('images/portfolio/P4.png')}}" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Nama Project</h5>
-                            <p class="card-text">Penjelasan singkat project</p>
-                            <a href="#" class="btn btn-primary">Selengkapnya</a>
-                        </div>
-                    </div>
-                    <div class="card card-daz">
-                        <img src="{{asset('images/portfolio/P5.png')}}" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Nama Project</h5>
-                            <p class="card-text">Penjelasan singkat project</p>
-                            <a href="#" class="btn btn-primary">Selengkapnya</a>
-                        </div>
-                    </div>
-                    <div class="card card-daz">
-                        <img src="{{asset('images/portfolio/P6.png')}}" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Nama Project</h5>
-                            <p class="card-text">Penjelasan singkat project</p>
-                            <a href="#" class="btn btn-primary">Selengkapnya</a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -284,26 +267,26 @@
     </div>
 </section>
 <section id="Contactperson">
-    <div class="container bg-blue-800">
+    <div class="container bg-blue-800 site-team">
         <div class="row mt-5">
             <div class="col-lg-8 col-12">
-                <h3 class="text-light title">Anda Memiliki Pertanyaan?</h3>
-                <h5 class="text-light mt-2 mb-4">Tim kami siap memberikan penjelasannya. Hubungi kami melalui whatsaap atau email kami.</h5>
+                <h3 class="text-light title ms-4">@lang('company.contactquestion')</h3>
+                <h5 class="text-light mt-2 mb-4 ms-4">@lang('company.contactquestiondesc')</h5>
             </div>
             <div class="col-lg-4 col-12 mt-4">                
                 <div class="d-grid gap-2">
-                    <button class="btn btn-light mt-2" type="button">
+                    <button class="btn btn-danger mt-2 " type="button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at" viewBox="0 0 16 16">
                         <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z"/>
                         <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
                         </svg>
-                        Email Kami
+                        Email
                     </button>
-                    <button class="btn btn-light mt-2 mb-4" type="button">
+                    <button class="btn btn-success mt-2 mb-4" type="button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
                         <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
                         </svg>
-                        Whatsapp Kami
+                        Whatsapp
                     </button>
                 </div>
             </div>

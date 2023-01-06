@@ -31,5 +31,10 @@
         "innovation" => "Creative and innovative",
         "leadinnovation" => "In every job we always innovate and communicate well with our customers so that the best results can be created for you.",
         "thank" => "Thank you for your contribution.",
+        "address" => "Address",
+        "ourcustomers" => "Our Customers",
+        "newsandproject" => "News & Projects",
+        "contactquestion" => "You have a question ?",
+        "contactquestiondesc" => "Our team is ready to provide an explanation. Contact us via WhatsApp or email.",
     ];
 ?>

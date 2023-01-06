@@ -31,5 +31,10 @@
         "innovation" => "Kreatif dan Berkomunikasi ",
         "leadinnovation" => "Dalam setiap pekerjaan kami selalu melakukan inovasi dan melakukan komunikasi yang baik kepada pelanggan kami agar dapat tercipta hasil yang terbaik untuk anda.",
         "thank" => "Thank you for your contribution.",
+        "address" => "Alamat",
+        "ourcustomers" => "Pelanggan Kami",
+        "newsandproject" => "Berita & Gallery Proyek",
+        "contactquestion" => "Anda memiliki pertanyaan ?",
+        "contactquestiondesc" => "Tim kami siap memberikan penjelasannya. Hubungi kami melalui whatsaap atau email kami.",
     ];
 ?>

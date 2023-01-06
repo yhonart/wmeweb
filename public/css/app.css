@@ -109,7 +109,7 @@ body :{
 .site-product {
     background: url("../images/slider/1.jpg") center center no-repeat;
     background-size: cover;
-    padding: 80px 0 60px 0;
+    padding: 20px;
     position: relative;
     background-attachment: fixed;
 }
@@ -124,6 +124,28 @@ body :{
 
     /* End product site */
 }
+.site-team {
+    background: url("../images/slider/our-team.png") center center no-repeat;
+    background-size: cover;
+    padding: 20px;
+    position: relative;
+    background-attachment: fixed;
+}
+.site-team::before {
+    content: "";
+    position: absolute;
+    background: rgba(108, 0, 255, 0.8);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    /* End product site */
+}
+.site-team .row {
+    position: relative;
+}
+
 .site-product img {
     position: relative;
     max-width: 250px;
@@ -146,25 +168,26 @@ body :{
 
 .card-daz {
     background: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 20px;
     backdrop-filter: blur(5px);
+    transition: 0.3s;
+    overflow: hidden;
 }
 
-.card-daz img {
-    position:relative;
+.card-daz-header img {
+    object-position: center;
+    object-fit: cover;
+    border-radius: 0px 50px 0px 50px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    filter: contrast(120%);
     width: 100%;
-    backdrop-size:cover;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top:20px;
-    border-radius: 20px;
 }
 
-.card-daz .card-body {
-    color:#f8fafc;
+.card-daz-body {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    color:#fff;
+    min-height: 150px;
 }
 blockquote{
     margin-left: calc(50% - 306px);
@@ -177,4 +200,9 @@ blockquote{
         margin-left: 0;
         width:100%;              
     }
+}
+
+.img-daz{
+    border-radius: 0px 50px 0px 50px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
