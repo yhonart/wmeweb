@@ -8,8 +8,8 @@
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
-        <img src="{{asset('images/slider/manufacture-slider.png')}}" class="img-fluid d-none d-sm-block" alt="...">
-        <img src="{{asset('images/slider/manufacture-slider-mobile1.png')}}" class="img-fluid d-block d-sm-none" alt="...">
+        <img src="{{asset('/public/images/slider/manufacture-slider.png')}}" class="img-fluid d-none d-sm-block" alt="...">
+        <img src="{{asset('/public/images/slider/manufacture-slider-mobile1.png')}}" class="img-fluid d-block d-sm-none" alt="...">
         <div class="carousel-caption text-start d-none d-sm-block">            
             <h1 class="fw-bold">Mechanical, Electrical</h1>
             <h1 class="fw-bold">Manufacture Industries</h1>
@@ -24,16 +24,16 @@
         </div>
         </div>
         <div class="carousel-item">
-        <img src="{{asset('images/slider/our-team.png')}}" class="img-fluid d-none d-sm-block" alt="...">
-        <img src="{{asset('images/slider/our-team-mobile.png')}}" class="img-fluid d-block d-sm-none" alt="...">
+        <img src="{{asset('/public/images/slider/our-team.png')}}" class="img-fluid d-none d-sm-block" alt="...">
+        <img src="{{asset('/public/images/slider/our-team-mobile.png')}}" class="img-fluid d-block d-sm-none" alt="...">
         <div class="carousel-caption d-none d-md-block">
             <h3 class="fw-bold">@lang('company.slideteam')</h3>
             <p>@lang('company.slideteamlead')</p>
         </div>
         </div>
         <div class="carousel-item">
-        <img src="{{asset('images/slider/electrical.png')}}" class="img-fluid d-none d-sm-block" alt="...">
-        <img src="{{asset('images/slider/electrical-mobile.png')}}" class="img-fluid d-block d-sm-none" alt="...">
+        <img src="{{asset('/public/images/slider/electrical.png')}}" class="img-fluid d-none d-sm-block" alt="...">
+        <img src="{{asset('/public/images/slider/electrical-mobile.png')}}" class="img-fluid d-block d-sm-none" alt="...">
         <div class="carousel-caption d-none d-md-block">
             <h3 class="fw-bold">PT. Wahyu Mustika Engineering</h3>
             <p>@lang('company.slideproject')</p>
@@ -59,7 +59,7 @@
             </div>
         </div>
         <div class="row">            
-            <div class="col-lg-6 col-12 text-center" style="background: url({{asset('images/tools.jpg')}}) center / cover no-repeat;">
+            <div class="col-lg-6 col-12 text-center" style="background: url({{asset('/public/images/tools.jpg')}}) center / cover no-repeat;">
                 <div class="row d-flex justify-content-center mt-5">
                     <div class="col-8">
                         <div class="card bg-warning" data-aos="fade-right">                            
@@ -139,7 +139,7 @@
         <div class="row">
             <div class="col-lg-3 col-6 mb-2">
                 <div class="example-2 card-services mt-4" data-aos="zoom-in-up" id="Mechanical">
-                    <div class="wrapper" style="background: url({{asset('images/services/1.png')}}) center / cover no-repeat;">                        
+                    <div class="wrapper" style="background: url({{asset('/public/images/services/1.png')}}) center / cover no-repeat;">                        
                         <div class="data">
                             <div class="content">
                                 <h5 class="title"><a href="#Mechanical">Mechanical</a></h5>
@@ -152,7 +152,7 @@
             </div>
             <div class="col-lg-3 col-6 mb-2">
                 <div class="example-2 card-services mt-4" data-aos="zoom-in-up" id="Electrical">
-                    <div class="wrapper" style="background: url({{asset('images/services/2.jpg')}}) center / cover no-repeat;">                        
+                    <div class="wrapper" style="background: url({{asset('/public/images/services/2.jpg')}}) center / cover no-repeat;">                        
                         <div class="data">
                             <div class="content">
                                 <h5 class="title"><a href="#Electrical">Electrical</a></h5>
@@ -165,7 +165,7 @@
             </div>
             <div class="col-lg-3 col-6 mb-2">
                 <div class="example-2 card-services mt-4" data-aos="zoom-in-up" id="Manufacture">
-                    <div class="wrapper" style="background: url({{asset('images/services/3.jpg')}}) center / cover no-repeat;">                        
+                    <div class="wrapper" style="background: url({{asset('/public/images/services/3.jpg')}}) center / cover no-repeat;">                        
                         <div class="data">
                             <div class="content">
                                 <h5 class="title"><a href="#Manufacture">Manufacture Industri</a></h5>
@@ -178,7 +178,7 @@
             </div>
             <div class="col-lg-3 col-6 mb-2">
                 <div class="example-2 card-services mt-4" data-aos="zoom-in-up" id="Marine">
-                    <div class="wrapper" style="background: url({{asset('images/services/5.png')}}) center / cover no-repeat;">                        
+                    <div class="wrapper" style="background: url({{asset('/public/images/services/5.png')}}) center / cover no-repeat;">                        
                         <div class="data">
                             <div class="content">
                                 <h5 class="title"><a href="#Marine">Marine</a></h5>
@@ -204,7 +204,7 @@
                 <div class="customers-brand">
                     @foreach($wmeclient as $wmec)
                         <div class="text-center">
-                            <img src="{{asset('images/customers')}}/{{$wmec->client_img_name}}.{{$wmec->client_img_type}}" alt="" class="img-fluid">
+                            <img src="{{asset('/public/images/customers')}}/{{$wmec->client_img_name}}.{{$wmec->client_img_type}}" alt="" class="img-fluid">
                         </div>
                     @endforeach                    
                 </div>
@@ -215,7 +215,7 @@
                 <div class="customers-brand">
                     @foreach($wmeclient2 as $wmecs)
                         <div class="text-center">
-                            <img src="{{asset('images/customers')}}/{{$wmecs->client_img_name}}.{{$wmecs->client_img_type}}" alt="" class="img-fluid">
+                            <img src="{{asset('/public/images/customers')}}/{{$wmecs->client_img_name}}.{{$wmecs->client_img_type}}" alt="" class="img-fluid">
                         </div>
                     @endforeach                    
                 </div>
@@ -236,7 +236,7 @@
                     @foreach($project as $p)
                         <div>
                             <div class="card-daz-header">
-                                <img src="{{asset('images/portfolio')}}/{{$p->img_cover}}" alt="...">
+                                <img src="{{asset('/public/images/portfolio')}}/{{$p->img_cover}}" alt="...">
                             </div>
                             <div class="card-daz-body mt-4">
                                 <h5 class="card-title">{{$p->project_name}}</h5>

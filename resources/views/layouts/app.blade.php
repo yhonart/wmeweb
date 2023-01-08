@@ -9,12 +9,12 @@
     <!-- Scripts -->    
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">    
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('scss/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/carousel.css') }}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{asset('slick/slick.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('slick/slick-theme.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('icons/font/bootstrap-icons.css')}}">
+    <link href="{{ asset('/public/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('/public/scss/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('/public/css/carousel.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset('/public/slick/slick.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('/public/slick/slick-theme.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('/public/icons/font/bootstrap-icons.css')}}">
     <style>
         .putar{
             width: 150px;
@@ -41,13 +41,13 @@
 <body>
     <div class="overlay" id="overlay">
         <div class="putar animate__animated animate__zoomIn">
-            <img src="{{asset('images/wme_logo.png')}}" alt="" height="160" class="img-fluid">
+            <img src="{{asset('/public/images/wme_logo.png')}}" alt="" height="160" class="img-fluid">
         </div>
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark navbar-on-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="{{asset('images/wme_logo.png')}}" alt="Bootstrap" height="60">
+                <img src="{{asset('/public/images/wme_logo.png')}}" alt="Bootstrap" height="60">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -78,8 +78,8 @@
                     </li>  
                 </ul>
                 <div class="p-2">
-                    <a href="lang/en" class="navbar-text p-1"><img src="{{asset('images/icon/united-kingdom-box.png')}}" alt="" srcset="" class="img-fluid" style="max-width:25px;"></a>                 
-                    <a href="lang/id" class="navbar-text p-1"><img src="{{asset('images/icon/indonesia.png')}}" alt="" srcset="" class="img-fluid" style="max-width:30px;"></a>
+                    <a href="lang/en" class="navbar-text p-1"><img src="{{asset('/public/images/icon/united-kingdom-box.png')}}" alt="" srcset="" class="img-fluid" style="max-width:25px;"></a>                 
+                    <a href="lang/id" class="navbar-text p-1"><img src="{{asset('/public/images/icon/indonesia.png')}}" alt="" srcset="" class="img-fluid" style="max-width:30px;"></a>
                 </div>
             </div>            
         </div>
@@ -185,11 +185,11 @@
         </div>
     </div>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="{{asset('bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('aos-master/dist/aos.js')}}"></script>
+    <script src="{{asset('/public/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('/public/aos-master/dist/aos.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="{{asset('slick/slick.js')}}" type="text/javascript" charset="utf-8"></script>
+    <script src="{{asset('/public/slick/slick.js')}}" type="text/javascript" charset="utf-8"></script>
     <script>        
         $.ajaxSetup({
             headers: {
