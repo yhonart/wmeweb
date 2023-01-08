@@ -20,3 +20,4 @@ deployment:
     - /bin/cp phpunit.xml $DEPLOYPATH
     - /bin/cp server.php $DEPLOYPATH
     - /bin/cp webpack.mix.js $DEPLOYPATH
+    - /bin/cp index.php $DEPLOYPATH
