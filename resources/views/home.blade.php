@@ -12,7 +12,7 @@
         <img src="{{asset('/public/images/slider/manufacture-slider-mobile1.png')}}" class="img-fluid d-block d-sm-none" alt="...">
         <div class="carousel-caption text-start d-none d-sm-block">            
             <h1 class="fw-bold">Mechanical, Electrical</h1>
-            <h1 class="fw-bold">Manufacture Industries</h1>
+            <h1 class="fw-bold">Manufacture Industry</h1>
             <p class="fs-6">@lang('company.welcome')</p>
             <a href="#Contactperson" class="btn btn-primary btn-md">@lang('company.contactnow')</a>
         </div>
@@ -99,6 +99,13 @@
         </div>
     </div>
 </section>
+<!-- <section>
+    <div class="container">
+        <div class="row mt-2">
+            <img src="{{asset('/public/images/ISO-1.png')}}" alt="" class="img-fluid">
+        </div>
+    </div>
+</section> -->
 <section id="aboutme">
     <div class="container">
         <div class="row mt-5">

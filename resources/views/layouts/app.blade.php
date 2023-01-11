@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{asset('/public/images/favicon/apple-icon-57x57.png')}}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{asset('/public/images/favicon/apple-icon-60x60.png')}}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{asset('/public/images/favicon/apple-icon-72x72.png')}}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('/public/images/favicon/apple-icon-76x76.png')}}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{asset('/public/images/favicon/apple-icon-114x114.png')}}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{asset('/public/images/favicon/apple-icon-120x120.png')}}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{asset('/public/images/favicon/apple-icon-144x144.png')}}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{asset('/public/images/favicon/apple-icon-152x152.png')}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('/public/images/favicon/apple-icon-180x180.png')}}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{asset('/public/images/favicon/android-icon-192x192.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('/public/images/favicon/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{asset('/public/images/favicon/favicon-96x96.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('/public/images/favicon/favicon-16x16.png')}}">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <title>PT. Wahyu Mustika Engineering</title>
     <!-- Scripts -->    
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">    
@@ -41,13 +58,17 @@
 <body>
     <div class="overlay" id="overlay">
         <div class="putar animate__animated animate__zoomIn">
-            <img src="{{asset('/public/images/wme_logo.png')}}" alt="" height="160" class="img-fluid">
+            <img src="{{asset('/public/images/Brand-logo3.png')}}" alt="" height="160" class="img-fluid">
+            <p class="text-center text-primary">Mechanical, Electrical & Manufacture Industry</p>
         </div>
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark navbar-on-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="{{asset('/public/images/wme_logo.png')}}" alt="Bootstrap" height="60">
+            <a class="navbar-brand d-none d-md-block" href="#">
+                <img src="{{asset('/public/images/Brand-logo5.png')}}" alt="Bootstrap" height="60">
+            </a>
+            <a class="navbar-brand d-block d-md-none" href="#">
+                <img src="{{asset('/public/images/Brand-Mobile.png')}}" alt="Bootstrap" height="60">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
