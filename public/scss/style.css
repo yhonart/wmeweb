@@ -34,15 +34,15 @@
   min-height: 300px;
   position: relative;
   overflow: hidden;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 .card-services .wrapper:hover .data {
   transform: translateY(0);
 }
 .card-services .data {
-  background-color: rgba(234, 253, 252, 0.7);
-  -webkit-backdrop-filter: blur(6px);
-          backdrop-filter: blur(6px);
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -114,7 +114,7 @@
   margin: 2em auto 1em;
   text-align: center;
   font-size: 12px;
-  color: #fff;
+  color: #0f172a;
   line-height: 1;
   position: relative;
   font-weight: 700;

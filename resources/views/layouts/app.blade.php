@@ -34,14 +34,15 @@
     <link rel="stylesheet" type="text/css" href="{{asset('/public/icons/font/bootstrap-icons.css')}}">
     <style>
         .putar{
-            width: 150px;
-            height: 150px;      
+            width: 50%;
+            height: 50%;      
             position: fixed;
             top:0;
             bottom: 0;
             left: 0;
             right: 0;
             margin:auto;
+            text-align: center;
         }
 
         #overlay{
@@ -51,21 +52,20 @@
             position: fixed;
             left: 0;
             top: 0;
-            z-index: 20;
+            z-index: 1060;
         }
     </style>
 </head>
 <body>
     <div class="overlay" id="overlay">
         <div class="putar animate__animated animate__zoomIn">
-            <img src="{{asset('/public/images/Brand-logo3.png')}}" alt="" height="160" class="img-fluid">
-            <p class="text-center text-primary">Mechanical, Electrical & Manufacture Industry</p>
+            <img src="{{asset('/public/images/landingpage.png')}}" alt="" height="160" class="img-fluid">
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-on-top">
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #f8fafc;">
         <div class="container-fluid">
             <a class="navbar-brand d-none d-md-block" href="#">
-                <img src="{{asset('/public/images/Brand-logo5.png')}}" alt="Bootstrap" height="60">
+                <img src="{{asset('/public/images/Brand-WME.png')}}" alt="Bootstrap" height="60">
             </a>
             <a class="navbar-brand d-block d-md-none" href="#">
                 <img src="{{asset('/public/images/Brand-Mobile.png')}}" alt="Bootstrap" height="60">
@@ -76,7 +76,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link fw-bold dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             @lang('company.navbar.about')
                         </a>
                         <ul class="dropdown-menu">
@@ -86,16 +86,16 @@
                         </ul>
                     </li>                    
                     <li class="nav-item">
-                        <a class="nav-link" href="#">@lang('company.navbar.service')</a>
+                        <a class="nav-link fw-bold" href="#">@lang('company.navbar.service')</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">@lang('company.navbar.news')</a>
+                        <a class="nav-link fw-bold" href="#">@lang('company.navbar.news')</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">@lang('company.navbar.contact')</a>
+                        <a class="nav-link fw-bold" href="#">@lang('company.navbar.contact')</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">@lang('company.navbar.carier')</a>
+                        <a class="nav-link fw-bold" href="#">@lang('company.navbar.carier')</a>
                     </li>  
                 </ul>
                 <div class="p-2">

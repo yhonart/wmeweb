@@ -144,58 +144,21 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-3 col-6 mb-2">
-                <div class="example-2 card-services mt-4" data-aos="zoom-in-up" id="Mechanical">
-                    <div class="wrapper" style="background: url({{asset('/public/images/services/1.png')}}) center / cover no-repeat;">                        
+            @foreach($product as $p)
+            <div class="col-lg-4 col-6 mb-2">
+                <div class="example-2 card-services mt-4" data-aos="zoom-in-up" id="{{$p->product_id}}">
+                    <div class="wrapper" style="background: url({{asset('/public/images/services')}}/{{$p->product_cover}}) center / cover no-repeat;">                        
                         <div class="data">
                             <div class="content">
-                                <h5 class="title"><a href="#Mechanical">Mechanical</a></h5>
-                                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, enim dolor cum neque ea minima tempore.</p>
-                                <a href="#Mechanical" class="button">Selengkapnya</a>
+                                <h5 class="title"><a href="#">{{$p->product_title}}</a></h5>
+                                <p class="text">{{substr($p->product_content,0,100)}}....</p>
+                                <a href="#" class="button">Selengkapnya</a>
                             </div>
                         </div>
                     </div>
                 </div>                
             </div>
-            <div class="col-lg-3 col-6 mb-2">
-                <div class="example-2 card-services mt-4" data-aos="zoom-in-up" id="Electrical">
-                    <div class="wrapper" style="background: url({{asset('/public/images/services/2.jpg')}}) center / cover no-repeat;">                        
-                        <div class="data">
-                            <div class="content">
-                                <h5 class="title"><a href="#Electrical">Electrical</a></h5>
-                                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, enim dolor cum neque ea minima tempore.</p>
-                                <a href="#Electrical" class="button">Selengkapnya</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-6 mb-2">
-                <div class="example-2 card-services mt-4" data-aos="zoom-in-up" id="Manufacture">
-                    <div class="wrapper" style="background: url({{asset('/public/images/services/3.jpg')}}) center / cover no-repeat;">                        
-                        <div class="data">
-                            <div class="content">
-                                <h5 class="title"><a href="#Manufacture">Manufacture Industri</a></h5>
-                                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, enim dolor cum neque ea minima tempore.</p>
-                                <a href="#Manufacture" class="button">Selengkapnya</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-6 mb-2">
-                <div class="example-2 card-services mt-4" data-aos="zoom-in-up" id="Marine">
-                    <div class="wrapper" style="background: url({{asset('/public/images/services/5.png')}}) center / cover no-repeat;">                        
-                        <div class="data">
-                            <div class="content">
-                                <h5 class="title"><a href="#Marine">Marine</a></h5>
-                                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, enim dolor cum neque ea minima tempore.</p>
-                                <a href="#Marine" class="button">Selengkapnya</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach            
         </div>
     </div>
 </section>
@@ -239,13 +202,13 @@
         </div>
         <div class="row mt-2">
             <div class="col-md-12">
-                <div class="news-and-project">
+                <div class="news-and-project">                    
                     @foreach($project as $p)
-                        <div>
-                            <div class="card-daz-header">
-                                <img src="{{asset('/public/images/portfolio')}}/{{$p->img_cover}}" alt="...">
-                            </div>
-                            <div class="card-daz-body mt-4">
+                        <div class="card">
+                            <div class="card-body p-2">
+                                <div class="d-flex justify-content-center">
+                                    <img src="{{asset('/public/images/portfolio')}}/{{$p->img_cover}}" alt="..." class="card-img-top" style="object-fit:cover;">
+                                </div>
                                 <h5 class="card-title">{{$p->project_name}}</h5>
                                 <p class="card-text">{{$p->project_desc}}</p>
                                 <a href="#" class="btn btn-primary">Selengkapnya</a>

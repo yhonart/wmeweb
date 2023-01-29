@@ -25,3 +25,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/project', [App\Http\Controllers\ProjectController::class, 'listproject'])->name('project');
 Route::get('/aboutme', [App\Http\Controllers\PageController::class, 'aboutme'])->name('aboutme');
 Route::get('/quality', [App\Http\Controllers\PageController::class, 'quality'])->name('quality');
+
+// Route DIR
+include __DIR__.'/Admin/admin.php';

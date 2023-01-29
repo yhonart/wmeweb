@@ -38,7 +38,7 @@
         min-height: 300px;
         position: relative;
         overflow: hidden;
-        border-radius: 15px;
+        border-radius: 5px;
         &:hover {
         .data {
             transform: translateY(0);
@@ -46,8 +46,8 @@
         }
     }
     .data {
-        background-color: rgba(234, 253, 252, .7);  
-        backdrop-filter: blur(6px);
+        background-color: rgba(255, 255, 255, .8);  
+        backdrop-filter: blur(4px);
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -123,7 +123,7 @@
         margin: 2em auto 1em;
         text-align: center;
         font-size: 12px;
-        color: $white;
+        color: $black;
         line-height: 1;
         position: relative;
         font-weight: 700;

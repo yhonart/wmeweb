@@ -47,6 +47,10 @@ class HomeController extends Controller
             ->where('lang',$locale)
             ->first();
 
-        return view('home', compact('wmeclient','wmeclient2','project','aboutus','vision'));
+        $product = DB::table('wme_product')
+            ->where('lang',$locale)
+            ->get();
+
+        return view('home', compact('wmeclient','wmeclient2','project','aboutus','vision','product'));
     }
 }
