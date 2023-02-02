@@ -1,36 +1,23 @@
 @extends('layouts.app')
 @section('content')
-<section>
-    <div class="container">
-        <div class="row mt-4">
-            <div class="col-md-12">
-                <nav aria-label="breadcrumb bg-light">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
-                        <li class="breadcrumb-item"><a href="aboutme">@lang('company.navbar.about')</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">@lang('company.aboutdown.kebijakan')</li>
-                    </ol>
-                </nav>
-            </div>
+<div class="container-fluid bg-primary p-5 hero-header mb-5 d-none d-sm-block">
+    <div class="row py-5">
+        <div class="col-12 text-center">
+            <h2 class="display-2 fw-semibold text-white animated zoomIn">@lang('company.aboutdown.kebijakan')</h2>            
         </div>
     </div>
-</section>
+</div>
+<div class="container bg-primary p-5 mb-5 d-block d-sm-none">
+    <div class="row py-5">
+        <div class="col-12 text-center">
+            <h2 class="display-2 fw-semibold text-white animated zoomIn">@lang('company.aboutdown.kebijakan')</h2>            
+        </div>
+    </div>
+</div>
 <section>
     <div class="container">
-        <div class="row mt-5">
-            <div class="col-12 text-center">
-                <h4 class="fw-bold text-primary title" data-aos="fade-up">@lang('company.aboutdown.kebijakan')</h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-12" style="background: url({{asset('images/quality2.png')}}) center / cover no-repeat;">
-                <div class="row mt-5">
-                    <div class="col-12 d-flex justify-content-center">
-                        <div class="fs-2 fw-bold text-light">Quality Policy</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-12">
+        <div class="row">            
+            <div class="col-12">
                 <div data-aos="fade-right">
                     @php
                         print $quality->about_desc;
@@ -38,12 +25,46 @@
                 </div>
             </div>
         </div>
-        <div class="row mt-5 border-top">
-            <div class="col-12 d-flex justify-content-center">
-                <a href="" class="btn btn-light btn-sm ms-2 mt-1">@lang('company.qms')</a>
-                <a href="" class="btn btn-light btn-sm ms-2 mt-1">@lang('company.komitmen')</a>
-                <a href="" class="btn btn-light btn-sm ms-2 mt-1">@lang('company.fokus')</a>
-                <a href="" class="btn btn-light btn-sm ms-2 mt-1">@lang('company.tinjauan')</a>
+        <div class="row mt-5">
+            <div class="col-lg-3 col-6">
+                <div class="service-item bg-light border-bottom border-5 border-primary rounded">
+                    <div class="position-relative p-5">
+                        <i class="flaticon-cctv d-block display-1 fw-normal text-secondary mb-3"></i>                        
+                        <h3 class="mb-3 text-primary">@lang('company.qms')</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consectetur quam, hic commodi sit obcaecati iure.</p>
+                        <a href="">Read More<i class="bi bi-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="service-item bg-light border-bottom border-5 border-primary rounded">
+                    <div class="position-relative p-5">
+                        <i class="flaticon-cctv d-block display-1 fw-normal text-secondary mb-3"></i>                        
+                        <h3 class="mb-3 text-primary">@lang('company.komitmen')</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consectetur quam, hic commodi sit obcaecati iure.</p>
+                        <a href="">Read More<i class="bi bi-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="service-item bg-light border-bottom border-5 border-primary rounded">
+                    <div class="position-relative p-5">
+                        <i class="flaticon-cctv d-block display-1 fw-normal text-secondary mb-3"></i>                        
+                        <h3 class="mb-3 text-primary">@lang('company.fokus')</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consectetur quam, hic commodi sit obcaecati iure.</p>
+                        <a href="">Read More<i class="bi bi-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="service-item bg-light border-bottom border-5 border-primary rounded">
+                    <div class="position-relative p-5">
+                        <i class="flaticon-cctv d-block display-1 fw-normal text-secondary mb-3"></i>                        
+                        <h3 class="mb-3 text-primary">@lang('company.tinjauan')</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consectetur quam, hic commodi sit obcaecati iure.</p>
+                        <a href="">Read More<i class="bi bi-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

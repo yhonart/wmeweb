@@ -1,31 +1,19 @@
 @extends('layouts.app')
 @section('content')
-<section>
-    <div class="container">
-        <div class="row mt-4">
-            <div class="col-md-12">
-                <nav aria-label="breadcrumb bg-light">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">@lang('company.navbar.about')</li>
-                    </ol>
-                </nav>
-            </div>
+<div class="container-fluid bg-primary p-5 hero-header mb-5">
+    <div class="row py-5">
+        <div class="col-12 text-center">
+            <h2 class="display-2 fw-semibold text-white animated zoomIn">@lang('company.navbar.about')</h2>            
         </div>
     </div>
-</section>
+    <div class="row">
+        <div class="col-12 d-flex flex-column flex-sm-row justify-content-center">
+            <iframe class="youtube-embade" src="https://www.youtube.com/embed/jDLuJLoaA_g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
 <section>
     <div class="container">
-        <div class="row mt-5">
-            <div class="col-12 text-center">
-                <h4 class="fw-bold text-primary title" data-aos="fade-up">@lang('company.navbar.about')</h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 d-flex flex-column flex-sm-row justify-content-center">
-                <iframe class="youtube-embade" src="https://www.youtube.com/embed/jDLuJLoaA_g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-        </div>
         <div class="row mt-5">
             <div class="col-12">
                 <div data-aos="fade-right">

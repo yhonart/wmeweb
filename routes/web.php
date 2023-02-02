@@ -20,6 +20,7 @@ if (file_exists(app_path('Http/Controllers/LocalizationController.php')))
     Route::get('lang/{locale}', [App\Http\Controllers\LocalizationController::class , 'lang']);
     Route::get('/lang/{locale}', [App\Http\Controllers\LocalizationController::class , 'lang']);
 }
+
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/project', [App\Http\Controllers\ProjectController::class, 'listproject'])->name('project');
@@ -28,3 +29,4 @@ Route::get('/quality', [App\Http\Controllers\PageController::class, 'quality'])-
 
 // Route DIR
 include __DIR__.'/Admin/admin.php';
+

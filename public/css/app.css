@@ -2,7 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 @import url('../aos-master/dist/aos.css');
-
+:root {
+    --primary: #2878EB;
+    --secondary: #F14D5D;
+    --light: #ECF4FF;
+    --dark: #120F2D;
+}
 body :{
     font-family: 'Manrope', sans-serif;
     background-color: #eff6ff;
@@ -212,4 +217,46 @@ blockquote{
 .img-daz{
     border-radius: 0px 50px 0px 50px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.hero-header {
+    background: linear-gradient(rgba(18, 15, 45, .7), rgba(18, 15, 45, .5)), url("../images/slider/bgtop.jpg") top right no-repeat;
+    background-size: cover;
+}
+
+.service-item div {
+    z-index: 1;
+}
+
+.service-item div::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 2px 2px 0 0;
+    transition: .5s;
+    z-index: -1;
+}
+
+.service-item div:hover::after {
+    width: 100%;
+    background: var(--primary);
+}
+
+.service-item * {
+    transition: .5s;
+}
+
+.service-item:hover * {
+    color: var(--light) !important;
+}
+
+.card-sad {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.45);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
 }

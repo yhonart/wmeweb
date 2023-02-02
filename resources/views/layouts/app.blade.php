@@ -62,9 +62,9 @@
             <img src="{{asset('/public/images/landingpage.png')}}" alt="" height="160" class="img-fluid">
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #f8fafc;">
+    <nav class="navbar navbar-expand-lg fixed-top bg-white navbar-light shadow-sm">
         <div class="container-fluid">
-            <a class="navbar-brand d-none d-md-block" href="#">
+            <a class="navbar-brand d-none d-md-block" href="{{url('/')}}">
                 <img src="{{asset('/public/images/Brand-WME.png')}}" alt="Bootstrap" height="60">
             </a>
             <a class="navbar-brand d-block d-md-none" href="#">
@@ -76,7 +76,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link fw-bold dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link fw-bold dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             @lang('company.navbar.about')
                         </a>
                         <ul class="dropdown-menu">
@@ -86,17 +86,24 @@
                         </ul>
                     </li>                    
                     <li class="nav-item">
-                        <a class="nav-link fw-bold" href="#">@lang('company.navbar.service')</a>
+                        <a class="nav-link fw-bold text-dark" href="#">@lang('company.navbar.service')</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold" href="#">@lang('company.navbar.news')</a>
+                        <a class="nav-link fw-bold text-dark" href="#">@lang('company.navbar.news')</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold" href="#">@lang('company.navbar.contact')</a>
+                        <a class="nav-link fw-bold text-dark" href="#">@lang('company.navbar.contact')</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold" href="#">@lang('company.navbar.carier')</a>
-                    </li>  
+                        <a class="nav-link fw-bold text-dark" href="#">@lang('company.navbar.carier')</a>
+                    </li> 
+                    @auth
+                    <li class="nav-item">
+                        <a id="navbarDropdown" class="nav-link fw-bold text-primary" href="Admin_Page" role="button">
+                            {{ Auth::user()->name }}
+                        </a>
+                    </li>
+                    @endauth
                 </ul>
                 <div class="p-2">
                     <a href="lang/en" class="navbar-text p-1"><img src="{{asset('/public/images/icon/united-kingdom-box.png')}}" alt="" srcset="" class="img-fluid" style="max-width:25px;"></a>                 
@@ -105,9 +112,7 @@
             </div>            
         </div>
     </nav>
-    <main>
-        @yield('content')
-    </main>
+    @yield('content')
     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4">
         <div class="container">
             <footer class="py-5">

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div id="carouselExampleCaptions" class="carousel slide">
+<div id="carouselExampleCaptions" class="carousel slide carousel-fade">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -10,24 +10,23 @@
         <div class="carousel-item active">
         <img src="{{asset('/public/images/slider/manufacture-slider.png')}}" class="img-fluid d-none d-sm-block" alt="...">
         <img src="{{asset('/public/images/slider/manufacture-slider-mobile1.png')}}" class="img-fluid d-block d-sm-none" alt="...">
-        <div class="carousel-caption text-start d-none d-sm-block">            
-            <h1 class="fw-bold">Mechanical, Electrical</h1>
-            <h1 class="fw-bold">Manufacture Industry</h1>
-            <p class="fs-6">@lang('company.welcome')</p>
+        <div class="carousel-caption align-items-center justify-content-center d-none d-sm-block">            
+            <h1 class="display-2 text-white mb-md-4 fw-semibold">Mechanical, Electrical</h1>
+            <h1 class="display-2 text-white mb-md-4 fw-semibold">Manufacture Industry</h1>
             <a href="#Contactperson" class="btn btn-primary btn-md">@lang('company.contactnow')</a>
         </div>
         <div class="carousel-caption text-start d-block d-sm-none">            
             <h4 class="fw-bold">Mechanical</h5>
             <h4 class="fw-bold">Electrical</h4>
             <h4 class="fw-bold">Manufacture Industries</h4>            
-            <a href="#Contactperson" class="btn btn-primary btn-md">@lang('company.contactnow')</a>
+            <a href="#Contactperson" class="btn btn-primary py-md-3 px-md-5">@lang('company.contactnow')</a>
         </div>
         </div>
         <div class="carousel-item">
         <img src="{{asset('/public/images/slider/our-team.png')}}" class="img-fluid d-none d-sm-block" alt="...">
         <img src="{{asset('/public/images/slider/our-team-mobile.png')}}" class="img-fluid d-block d-sm-none" alt="...">
         <div class="carousel-caption d-none d-md-block">
-            <h3 class="fw-bold">@lang('company.slideteam')</h3>
+            <h1 class="fw-bold text-white mb-md-4 fw-semibold">@lang('company.slideteam')</h1>
             <p>@lang('company.slideteamlead')</p>
         </div>
         </div>
@@ -55,7 +54,7 @@
         <div class="row">
             <div class="col-12 text-center">
                 <h4 class="fw-bold text-primary title" data-aos="fade-up">@lang('company.why')</h4>
-                <p class="lead" data-aos="fade-up">@lang('company.whyreasons')</p> 
+                <p class="lead fw-semibold" data-aos="fade-up">@lang('company.whyreasons')</p> 
             </div>
         </div>
         <div class="row">            
@@ -145,14 +144,14 @@
         </div>
         <div class="row">
             @foreach($product as $p)
-            <div class="col-lg-4 col-6 mb-2">
+            <div class="col-lg-4 col-12 mb-2">
                 <div class="example-2 card-services mt-4" data-aos="zoom-in-up" id="{{$p->product_id}}">
                     <div class="wrapper" style="background: url({{asset('/public/images/services')}}/{{$p->product_cover}}) center / cover no-repeat;">                        
                         <div class="data">
                             <div class="content">
                                 <h5 class="title"><a href="#">{{$p->product_title}}</a></h5>
                                 <p class="text">{{substr($p->product_content,0,100)}}....</p>
-                                <a href="#" class="button">Selengkapnya</a>
+                                <a href="#" class="btn btn-blue-800 btn-xs mt-2">@lang('company.readmore')</a>
                             </div>
                         </div>
                     </div>
@@ -211,7 +210,7 @@
                                 </div>
                                 <h5 class="card-title">{{$p->project_name}}</h5>
                                 <p class="card-text">{{$p->project_desc}}</p>
-                                <a href="#" class="btn btn-primary">Selengkapnya</a>
+                                <a href="#" class="btn btn-blue-800">Selengkapnya</a>
                             </div>
                         </div>
                     @endforeach
