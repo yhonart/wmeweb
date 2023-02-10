@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col-lg-3 col-6">
+            <div class="col-lg-3 col-12">
                 <div class="service-item bg-light border-bottom border-5 border-primary rounded">
                     <div class="position-relative p-5">
                         <i class="flaticon-cctv d-block display-1 fw-normal text-secondary mb-3"></i>                        
@@ -36,7 +36,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-6">
+            <div class="col-lg-3 col-12">
                 <div class="service-item bg-light border-bottom border-5 border-primary rounded">
                     <div class="position-relative p-5">
                         <i class="flaticon-cctv d-block display-1 fw-normal text-secondary mb-3"></i>                        
@@ -46,7 +46,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-6">
+            <div class="col-lg-3 col-12">
                 <div class="service-item bg-light border-bottom border-5 border-primary rounded">
                     <div class="position-relative p-5">
                         <i class="flaticon-cctv d-block display-1 fw-normal text-secondary mb-3"></i>                        
@@ -56,7 +56,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-6">
+            <div class="col-lg-3 col-12">
                 <div class="service-item bg-light border-bottom border-5 border-primary rounded">
                     <div class="position-relative p-5">
                         <i class="flaticon-cctv d-block display-1 fw-normal text-secondary mb-3"></i>                        

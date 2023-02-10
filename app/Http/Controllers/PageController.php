@@ -36,4 +36,25 @@ class PageController extends Controller
             ->first();
         return view('page.quality', compact('quality'));
     }
+
+    public function services()
+    {
+        $locale = App::currentLocale();
+        $product = DB::table('wme_product')
+            ->where('lang',$locale)
+            ->get();
+        return view('page.services', compact('product'));
+    }
+
+    public function servicesPage($locale, $id)
+    {
+        // $locale = App::currentLocale();
+        $productDetail = DB::table('wme_product')
+            ->where([
+                ['product_id',$id],
+                ['lang',$locale],
+                ])
+            ->first();
+        return view('page.services_detail', compact('productDetail'));
+    }
 }

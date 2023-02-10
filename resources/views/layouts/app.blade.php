@@ -18,9 +18,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{asset('/public/images/favicon/favicon-32x32.png')}}">
     <link rel="icon" type="image/png" sizes="96x96" href="{{asset('/public/images/favicon/favicon-96x96.png')}}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('/public/images/favicon/favicon-16x16.png')}}">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="{{asset('/public/images/favicon/manifest.json')}}">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="{{asset('/public/images/favicon/ms-icon-144x144.png')}}">
     <meta name="theme-color" content="#ffffff">
     <title>PT. Wahyu Mustika Engineering</title>
     <!-- Scripts -->    
@@ -86,16 +86,16 @@
                         </ul>
                     </li>                    
                     <li class="nav-item">
-                        <a class="nav-link fw-bold text-dark" href="#">@lang('company.navbar.service')</a>
+                        <a class="nav-link fw-bold text-dark" href="{{url('/')}}/#Services">@lang('company.navbar.service')</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold text-dark" href="#">@lang('company.navbar.news')</a>
+                        <a class="nav-link fw-bold text-dark" href="{{url('/')}}/#News">@lang('company.navbar.news')</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold text-dark" href="#">@lang('company.navbar.contact')</a>
+                        <a class="nav-link fw-bold text-dark" href="{{url('/')}}/#Contactperson">@lang('company.navbar.contact')</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold text-dark" href="#">@lang('company.navbar.carier')</a>
+                        <a class="nav-link fw-bold text-dark" href="carier">@lang('company.navbar.carier')</a>
                     </li> 
                     @auth
                     <li class="nav-item">

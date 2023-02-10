@@ -1,27 +1,23 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 @section('content')
-<section>
-    <div class="container">
-        <div class="row mt-4">
-            <div class="col-md-12">
-                <nav aria-label="breadcrumb bg-light">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>                        
-                    </ol>
-                </nav>
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Welcome Back</h1>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<section>
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-12">
-                <button class="btn btn-primary fw-bold shadow">Product</button>
-                <button class="btn btn-primary fw-bold shadow">News & Project</button>
-                <button class="btn btn-primary fw-bold shadow">Other</button>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
+</div>
 @endsection

@@ -1,5 +1,6 @@
 <?php
     return [
+        'bahasa' => 'id',
         'welcome' => 'PT. Wahyu Mustika Engineering adalah sebuah perusahaan Engineering, Contracting & Supplier. Kami menawarkan jasa engineering, procurement, contructing & maintenance dalam bidang electrical dan automation dalam proses pembangunan industry juga pembangunan gedung komersial.',
         "contactnow" => "Hubungi Kami Sekarang",
         "aboutdown" => [

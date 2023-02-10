@@ -35,7 +35,6 @@ class HomeController extends Controller
             ->orderBy('client_img_name','asc')
             ->get();
         $project = DB::table('wme_project')
-            ->where('lang',$locale)
             ->get();
         $aboutus = DB::table('wme_about_us')
             ->where([
