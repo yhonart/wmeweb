@@ -19,7 +19,7 @@
                 </div>                
             </div>
             <div class="carousel-item">
-                <img src="{{asset('/public/images/slider/our-team.png')}}" class="img-fluid d-none d-sm-block" alt="...">
+                <img src="{{asset('/public/images/slider/our-team.png')}}" class="w-100 d-none d-sm-block" alt="...">
                 <img src="{{asset('/public/images/slider/our-team-mobile.png')}}" class="img-fluid d-block d-sm-none" alt="...">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <h1 class="fw-bold text-white mb-md-4 fw-semibold">@lang('company.slideteam')</h1>
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="{{asset('/public/images/slider/electrical.png')}}" class="img-fluid d-none d-sm-block" alt="...">
+                <img src="{{asset('/public/images/slider/electrical.png')}}" class="w-100 d-none d-sm-block" alt="...">
                 <img src="{{asset('/public/images/slider/electrical-mobile.png')}}" class="img-fluid d-block d-sm-none" alt="...">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <h3 class="fw-bold">PT. Wahyu Mustika Engineering</h3>
