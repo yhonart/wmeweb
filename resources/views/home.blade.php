@@ -206,7 +206,7 @@
                         <div class="card">
                             <div class="card-body p-2">
                                 <div class="d-flex justify-content-center">
-                                    <img src="{{asset('/public/images/portfolio')}}/{{$p->img_cover}}" alt="..." class="card-img-top" style="object-fit:cover;">
+                                    <img src="{{asset('/public/images/portfolio')}}/{{$p->project_id}}/{{$p->img_cover}}" alt="..." class="card-img-top" style="object-fit:cover;">
                                 </div>
                                 <h5 class="card-title">{{$p->project_name}}</h5>
                                 <p class="card-text">{{$p->project_desc}}</p>

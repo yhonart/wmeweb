@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facedes\File;
+use Illuminate\Support\Facedes\Storage;
 
 class AdminController extends Controller
 {
@@ -35,7 +37,10 @@ class AdminController extends Controller
     }
 
     public function newsform(){
-        return view('admin_page/NewsForm');
+        $wmeclient = DB::table('wme_client')
+            ->get();
+
+        return view('admin_page/NewsForm',compact('wmeclient'));
     }
     public function newsedit($IdProject){
 
@@ -48,13 +53,46 @@ class AdminController extends Controller
 
         return view('admin_page/NewsFormEdit', compact('editproject','projectgallery','IdProject'));
     }
-    public function postingNewsEdit(Request $reqPostingEdit)
+    public function postingEditNews(Request $reqPostingEdit)
     {
         $update = DB::table('wme_project')
             ->where('project_id',$reqPostingEdit->idproject)
             ->update([
                 'project_name'=>$reqPostingEdit->edittitle,
                 'project_desc'=>$reqPostingEdit->editdesc,
+            ]);
+    }
+    public function postingAddNews(Request $reqPostingAdd)
+    {
+        $filecover = $reqPostingAdd->fileCover;
+        $projectid = DB::select("SHOW TABLE STATUS LIKE 'wme_project'");
+        $nextid = $projectid[0]->Auto_increment;
+
+        $typeFile = $filecover->getClientOriginalExtension();
+        $nameFile = $filecover->getClientOriginalName();
+        $sizeFile = $filecover->getSize();
+
+        $replaceNameFile = str_replace(' ', '_', $nameFile);
+        $filePath = pathinfo($replaceNameFile, PATHINFO_FILENAME);
+        $imgPath = public_path()."/images/portfolio/";
+        $dirimage = $imgPath.$nextid."/";
+
+        if(!file_exists($dirimage)){
+            $mkdir = mkdir($dirimage,0777);
+            $filecover->move($dirimage,$replaceNameFile);
+        }
+        else{
+            $filecover->move($dirimage,$replaceNameFile);
+        }
+
+        $insertNews = DB::table('wme_project')
+            ->insert([
+                'project_name'=>$reqPostingAdd->projectTitle,
+                'project_desc'=>$reqPostingAdd->projectDesc,
+                'project_date'=>$reqPostingAdd->projectDate,
+                'project_customer'=>$reqPostingAdd->clientName,
+                'lang'=>'id',
+                'img_cover'=>$replaceNameFile,
             ]);
     }
 }

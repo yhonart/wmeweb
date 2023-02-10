@@ -4,22 +4,33 @@
             <div class="card-body">
                 <form id="formAddNews">
                     <div class="form-group">
-                        <input type="Text" name="Text" id="Text" autocomplete="off" placeholder="Title" class="form-control">
+                        <input type="Text" name="projectTitle" id="projectTitle" autocomplete="off" placeholder="Title" class="form-control">
                     </div>                    
                     <div class="input-group date" id="DateProject" data-target-input="nearest">
-                        <input type="text" name="editdateproject" class="form-control datetimepicker-input" data-target="#DateProject"/>
+                        <input type="text" name="projectDate" class="form-control datetimepicker-input" data-target="#DateProject"/>
                         <div class="input-group-append" data-target="#DateProject" data-toggle="datetimepicker">
                             <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                         </div>
                     </div>
                     <div class="form-group mt-2">
-                        <textarea id="EditDesc" name="editdesc">
+                        <select name="clientName" id="clientName" class="form-control">
+                            <option value="">- Select Client -</option>
+                            @foreach($wmeclient as $wc)
+                                <option value="{{$wc->client_id}}">{{$wc->client_name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group mt-2">
+                        <textarea id="projectDesc" name="projectDesc">
                             Penjelasan Project
                         </textarea>
                     </div>
                     <div class="form-group">
                         <label for="">Upload Cover Project</label>
-                        <input type="File" name="Text" id="Text" autocomplete="off" placeholder="Text" class="form-control">
+                        <input type="File" name="fileCover" id="fileCover" autocomplete="off" placeholder="Text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success fw-semibold">Submit</button>
                     </div>
                 </form>            
             </div>
@@ -29,7 +40,7 @@
 <script>
     $(function () {
         // Summernote
-        $('#EditDesc').summernote({
+        $('#projectDesc').summernote({
             toolbar: [
                 // [groupName, [list of button]]
                 ['style', ['bold', 'italic', 'underline', 'clear']],
@@ -44,4 +55,22 @@
             format: 'YYYY-M-D',
         });        
     });
+    $(document).ready(function(){
+        $("form#formAddNews").submit(function(event){
+            event.preventDefault(); 
+            $.ajax({ 
+                url: "{{route('Admin_Page')}}/News/PostingAddNews", 
+                type: 'POST', 
+                data: new FormData(this), 
+                async: true, 
+                cache: true, 
+                contentType: false, 
+                processData: false, 
+                success: function (data) {
+                    $("#NotifEditService").fadeIn();
+                } 
+            }); 
+            return false; 
+        }); 
+    })
 </script>

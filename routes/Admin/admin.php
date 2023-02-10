@@ -10,7 +10,8 @@
     Route::get('/Admin_Page/News/Table', [App\Http\Controllers\AdminController::class, 'newstable']);
     Route::get('/Admin_Page/News/Add', [App\Http\Controllers\AdminController::class, 'newsform']);
     Route::get('/Admin_Page/News/Edit/{IdProject}', [App\Http\Controllers\AdminController::class, 'newsedit']);
-    Route::post('/Admin_Page/News/PostingEdit', [App\Http\Controllers\AdminController::class, 'postingNewsEdit']);
+    Route::post('/Admin_Page/News/PostingEdit', [App\Http\Controllers\AdminController::class, 'postingEditNews']);
+    Route::post('/Admin_Page/News/PostingAddNews', [App\Http\Controllers\AdminController::class, 'postingAddNews']);
 
     // WEB MENU
     Route::get('/Admin_Page/Menu', [App\Http\Controllers\AdminController::class, 'menu']);
