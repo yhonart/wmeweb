@@ -57,4 +57,12 @@ class PageController extends Controller
             ->first();
         return view('page.services_detail', compact('productDetail'));
     }
+    public function detailQMS ()
+    {
+        return view('page.qms');
+    }
+    public function detailQuality ()
+    {
+        return view('page.qualitypolice');
+    }
 }

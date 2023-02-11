@@ -35,7 +35,7 @@
     }
     .wrapper {
         background-color: $black;
-        min-height: 300px;
+        min-height: 400px;
         position: relative;
         overflow: hidden;
         border-radius: 5px;
@@ -54,16 +54,16 @@
         transform: translateY(calc(70px + 1em));
         transition: transform 0.3s;
         .content {
-        padding: 1em;
-        position: relative;
-        z-index: 1;
+            padding: 1em;
+            position: relative;
+            z-index: 1;
         }
     }
     .author {
         font-size: 12px;
     }
     .title {
-        margin-top: 10px;
+        margin-top: 12px;
     }
     .text {
         height: 70px;

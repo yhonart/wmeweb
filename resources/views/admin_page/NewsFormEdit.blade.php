@@ -75,10 +75,11 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <form id="FormAddGallery">
+                                <input type="hidden" name="idproject" value="{{$IdProject}}">
                                     <div class="form-group row">
                                         <label class="col-sm-4 col-form-label">Add Gallery</label>
                                         <div class="col-sm-8">
-                                            <input type="File" name="Text" id="Text" autocomplete="off" placeholder="Text" class="form-control">
+                                            <input type="File" name="fileGallery" autocomplete="off" placeholder="Text" class="form-control">
                                         </div>
                                     </div>
                                     <div class="form-group text-right">
@@ -89,15 +90,20 @@
                         </div>
                         <hr>
                         <div class="row mt-4">
-                            @if(!empty($projectgallery))
+                            @if(empty($projectgallery))
                                 <div class="col-12">
                                     <p>⚠ <em>Tidak ada gallery yang di masukkan</em></p>
                                 </div>
                             @else
                                 @foreach($projectgallery as $pg)
-                                    <div class="col-md-3 col-12">
-                                        <img src="" alt="" srcset="">
+                                <div class="col-12 col-lg-3">
+                                    <div class="card mb-2 bg-gradient-dark">
+                                    <img class="card-img-top" src="{{asset('public/images/portfolio')}}/{{$pg->from_project_id}}/{{$pg->gallery_name}}" alt="Dist Photo 1">
+                                    <div class="card-img-overlay d-flex flex-column justify-content-end">
+                                        <button class="btn btn-danger delete-image" data-id="{{$pg->gallery_id}}"><i class="fas fa-trash"></i> Delete</button>
                                     </div>
+                                    </div>
+                                </div>
                                 @endforeach
                             @endif
                         </div>
@@ -140,10 +146,40 @@
                 processData: false, 
                 success: function (data) {
                     $("#NotifEditService").fadeIn();
+                    location.reload();
                 } 
             }); 
             return false; 
         }); 
+        $("form#FormAddGallery").submit(function(event){
+            event.preventDefault(); 
+            $.ajax({ 
+                url: "{{route('Admin_Page')}}/News/PostingAddGallery", 
+                type: 'POST', 
+                data: new FormData(this), 
+                async: true, 
+                cache: true, 
+                contentType: false, 
+                processData: false, 
+                success: function (data) {
+                    $("#NotifEditService").fadeIn();
+                    location.reload();
+                } 
+            }); 
+            return false; 
+        });
+        $(".delete-image").click(function(){
+            var element = $(this);
+            var app_id = element.attr('data-id');
+            $.ajax({
+                type:"get",
+                url:"{{route('Admin_Page')}}/News/DeleteProjectGallery/"+app_id,
+                success:function(response)
+                {
+                    location.reload();
+                }
+            })
+        }) 
     })
 </script>
 @endsection

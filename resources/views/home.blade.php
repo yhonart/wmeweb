@@ -136,10 +136,10 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-12 text-center">
-                <h4 class="fw-bold text-light title" data-aos="fade-up">@lang('company.navbar.service')</h4>
+                <h4 class="fw-bold text-light title" data-aos="fade-up" style="letter-spacing: 5px;">@lang('company.navbar.service')</h4>
             </div>
         </div>
-        <div class="row">
+        <div class="row">            
             @foreach($product as $prod)
             <div class="col-lg-4 col-12 mb-2">
                 <div class="example-2 card-services mt-4" data-aos="zoom-in-up" id="{{$prod->product_id}}">
@@ -165,7 +165,7 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-12 text-center">
-                <h4 class="fw-bold text-primary title" data-aos="fade-up">@lang('company.ourcustomers')</h4>
+                <h4 class="fw-bold text-primary title" data-aos="fade-up" style="letter-spacing: 5px;">@lang('company.ourcustomers')</h4>
             </div>
         </div>
         <div class="row mt-5">
@@ -196,7 +196,7 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-12 text-center">
-                <h4 class="fw-bold text-warning title" data-aos="fade-up">@lang('company.newsandproject')</h4>
+                <h4 class="fw-bold text-warning title" data-aos="fade-up" style="letter-spacing: 5px;">@lang('company.newsandproject')</h4>
             </div>
         </div>
         <div class="row mt-2">
@@ -210,11 +210,16 @@
                                 </div>
                                 <h5 class="card-title">{{$p->project_name}}</h5>
                                 <p class="card-text">{{$p->project_desc}}</p>
-                                <a href="#" class="btn btn-blue-800">Selengkapnya</a>
+                                <a href="{{route('project')}}/detail/{{$p->project_id}}" class="btn btn-blue-800">Selengkapnya</a>
                             </div>
                         </div>
                     @endforeach
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 news-and-project">
+                <a href="project" class="btn btn-warning fw-bold">All Project</a>
             </div>
         </div>
     </div>

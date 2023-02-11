@@ -48,7 +48,7 @@ class AdminController extends Controller
             ->where('project_id',$IdProject)
             ->first();
         $projectgallery = DB::table('wme_project_gallery')
-            ->where('gallery_id',$IdProject)
+            ->where('from_project_id',$IdProject)
             ->get();
 
         return view('admin_page/NewsFormEdit', compact('editproject','projectgallery','IdProject'));
@@ -94,5 +94,37 @@ class AdminController extends Controller
                 'lang'=>'id',
                 'img_cover'=>$replaceNameFile,
             ]);
+    }
+
+    public function postingAddGallery(Request $addgallery)
+    {
+        $fileGallery = $addgallery->fileGallery;
+        $projectID = $addgallery->idproject;
+
+        $typeFile = $fileGallery->getClientOriginalExtension();
+        $nameFile = $fileGallery->getClientOriginalName();
+        $sizeFile = $fileGallery->getSize();
+
+        $replaceNameFile = str_replace(' ', '_', $nameFile);
+        $filePath = pathinfo($replaceNameFile, PATHINFO_FILENAME);
+        $imgPath = public_path()."/images/portfolio/";
+        $dirimage = $imgPath.$projectID."/";
+
+        if ($fileGallery<>"") {
+            $fileGallery->move($dirimage,$replaceNameFile);
+
+            $insertgallery = DB::table('wme_project_gallery')
+                ->insert([
+                    'from_project_id'=>$projectID,
+                    'gallery_name'=>$nameFile,
+                    'gallery_type'=>$typeFile,
+                ]);
+        }
+    }
+    public function deleteGalleryNews($iddel)
+    {
+        DB::table('wme_project_gallery')
+            ->where('gallery_id',$iddel)
+            ->delete();
     }
 }

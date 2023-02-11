@@ -31,8 +31,8 @@
                     <div class="position-relative p-5">
                         <i class="flaticon-cctv d-block display-1 fw-normal text-secondary mb-3"></i>                        
                         <h3 class="mb-3 text-primary">@lang('company.qms')</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consectetur quam, hic commodi sit obcaecati iure.</p>
-                        <a href="">Read More<i class="bi bi-arrow-right ms-2"></i></a>
+                        <p>@lang('company.manajemenmutudesc')</p>
+                        <a href="qms">Read More<i class="bi bi-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -41,8 +41,8 @@
                     <div class="position-relative p-5">
                         <i class="flaticon-cctv d-block display-1 fw-normal text-secondary mb-3"></i>                        
                         <h3 class="mb-3 text-primary">@lang('company.komitmen')</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores consectetur quam, hic commodi sit obcaecati iure.</p>
-                        <a href="">Read More<i class="bi bi-arrow-right ms-2"></i></a>
+                        @lang('company.komitmendesc')
+                        <a href="qualityPolice">Read More<i class="bi bi-arrow-right ms-2"></i></a>
                     </div>
                 </div>
             </div>

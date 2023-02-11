@@ -12,9 +12,21 @@ class ProjectController extends Controller
     {
         $locale = App::currentLocale();
         $data = DB::table('wme_project')
-            ->where('lang',$locale)
             ->get();
 
-        return view('page.project',);
+        return view('page.project', compact('data'));
+    }
+
+    public function detailProject($id)
+    {
+        $projectDetail = DB::table('wme_project')
+            ->where('project_id',$id)
+            ->first();
+        
+        $projectGallery = DB::table('wme_project_gallery')
+            ->where('from_project_id',$id)
+            ->get();
+
+        return view('page.project_detail', compact('projectDetail','projectGallery','id'));
     }
 }
