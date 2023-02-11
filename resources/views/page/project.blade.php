@@ -3,7 +3,7 @@
 <div class="container-fluid bg-primary p-5 hero-header mb-5">
     <div class="row py-5">
         <div class="col-12 text-center">
-            <h2 class="display-2 fw-semibold text-white animated zoomIn">@lang('company.komitmen')</h2>            
+            <h2 class="display-2 fw-semibold text-white animated zoomIn">@lang('company.newsandproject')</h2>            
         </div>
     </div>
 </div>
