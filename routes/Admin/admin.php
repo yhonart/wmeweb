@@ -3,7 +3,11 @@
     Route::get('/Admin_Page', [App\Http\Controllers\AdminController::class, 'adminpage'])->name('Admin_Page');
 
     // PRODUCT & SERVICES
-    Route::get('/Admin_Page/Services', [App\Http\Controllers\AdminController::class, 'services']);
+    Route::get('/Admin_Page/Services', [App\Http\Controllers\AdmServiceController::class, 'services']);
+    Route::get('/Admin_Page/Services/Table/{lang}', [App\Http\Controllers\AdmServiceController::class, 'tableservices']);
+    Route::get('/Admin_Page/Services/Edit/{id}', [App\Http\Controllers\AdmServiceController::class, 'editservice']);
+    Route::post('/Admin_Page/Services/PostingEdit', [App\Http\Controllers\AdmServiceController::class, 'postingeditservice']);
+    Route::get('/Admin_Page/Services/Delete/{id}', [App\Http\Controllers\AdmServiceController::class, 'deleteservice']);
 
     // NEWS & PROJECT
     Route::get('/Admin_Page/News', [App\Http\Controllers\AdminController::class, 'news']);

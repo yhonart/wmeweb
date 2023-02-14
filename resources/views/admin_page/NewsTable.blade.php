@@ -25,7 +25,7 @@
                                 <td class="text-right">
                                     <a class="btn btn-info btn-sm" href="{{route('Admin_Page')}}/News/Edit/{{$tbwp->project_id}}"><i class="fas fa-pencil-alt"></i></a>
                                     <a class="btn btn-warning btn-sm" href=""><i class="fas fa-eye"></i></a>
-                                    <a class="btn btn-danger btn-sm" href=""><i class="fas fa-trash-alt"></i></a>
+                                    <a class="btn btn-danger btn-sm" href="{{route('Admin_Page')}}/News/Edit/{{$tbwp->project_id}}"><i class="fas fa-trash-alt"></i></a>
                                 </td>
                             </tr>
                         @endforeach

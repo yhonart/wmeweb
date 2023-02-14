@@ -21,13 +21,15 @@
                 </div>
             </div>
             <div class="row mt-2">
-                <div class="text-center loading-news-table" style="display:none;">
-                    <span class="spinner-grow spinner-grow-sm"></span>
-                    <span class="spinner-grow spinner-grow-sm text-info"></span>
-                    <span class="spinner-grow spinner-grow-sm text-maroon"></span>
-                    Please Wait ....
+                <div class="col-12">
+                    <div class="text-center loading-news-table" style="display:none;">
+                        <span class="spinner-grow spinner-grow-sm"></span>
+                        <span class="spinner-grow spinner-grow-sm text-info"></span>
+                        <span class="spinner-grow spinner-grow-sm text-maroon"></span>
+                        Please Wait ....
+                    </div>
+                    <div class="news-table"></div>
                 </div>
-                <div class="news-table"></div>
             </div>
         </div>
     </section>

@@ -19,7 +19,11 @@
                                     <img src="{{asset('/public/images/portfolio')}}/{{$p->project_id}}/{{$p->img_cover}}" alt="..." class="card-img-top" style="object-fit:cover;">
                                 </div>
                                 <h5 class="card-title">{{$p->project_name}}</h5>
-                                <p class="card-text">{{substr($p->project_desc,10)}}</p>
+                                <p class="card-text">
+                                    <?php
+                                        print substr($p->project_desc,0,50);
+                                    ?>
+                                </p>
                                 <a href="{{route('project')}}/detail/{{$p->project_id}}" class="btn btn-blue-800">Selengkapnya</a>
                             </div>
                         </div>

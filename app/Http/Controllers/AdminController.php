@@ -16,11 +16,7 @@ class AdminController extends Controller
 
     public function adminpage(){
         return view('admin_page/AdminPage');
-    }
-    
-    public function services(){
-        return view('admin_page/ServicesPage');
-    }
+    }  
 
     public function news(){
         return view('admin_page/NewsPage');
@@ -50,8 +46,11 @@ class AdminController extends Controller
         $projectgallery = DB::table('wme_project_gallery')
             ->where('from_project_id',$IdProject)
             ->get();
+        $produkcat = DB::table('wme_product')
+            ->where('lang','id')
+            ->get();
 
-        return view('admin_page/NewsFormEdit', compact('editproject','projectgallery','IdProject'));
+        return view('admin_page/NewsFormEdit', compact('editproject','projectgallery','IdProject','produkcat'));
     }
     public function postingEditNews(Request $reqPostingEdit)
     {
@@ -60,6 +59,7 @@ class AdminController extends Controller
             ->update([
                 'project_name'=>$reqPostingEdit->edittitle,
                 'project_desc'=>$reqPostingEdit->editdesc,
+                'product_category'=>$reqPostingEdit->prodcat,
             ]);
     }
     public function postingAddNews(Request $reqPostingAdd)

@@ -25,6 +25,17 @@
                         <form id="FormNewsEdit">
                             <input type="hidden" name="idproject" value="{{$IdProject}}">
                             <div class="form-group row">
+                                <label class="col-sm-4 col-form-label">Category</label>
+                                <div class="col-sm-8">
+                                    <select name="prodcat" id="ProdCat" class="form-control">
+                                        <option value="{{$editproject->product_category}}">{{$editproject->product_category}}</option>
+                                        @foreach($produkcat as $prodcat)
+                                            <option value="{{$prodcat->product_title}}">{{$prodcat->product_title}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
                                 <label class="col-sm-4 col-form-label">Project Title</label>
                                 <div class="col-sm-8">
                                     <input type="Text" name="edittitle" id="EditTitle" autocomplete="off" class="form-control" value="{{$editproject->project_name}}">
@@ -50,11 +61,6 @@
                                     </textarea>
                             </div>
                             <div class="form-group row">
-                                <div class="col-8">
-                                    <div class="text-right">
-                                        <span class="fw-bold text-success" style="display:none;" id="NotifEditService">✔ Data Tersimpan</span>
-                                    </div>
-                                </div>
                                 <div class="col-4 text-right">
                                     <button type="submit" class="btn btn-md btn-success  fw-bold" id="UpdatingProject">Save</button>
                                 </div>
@@ -136,6 +142,7 @@
     $(document).ready(function(){
         $("form#FormNewsEdit").submit(function(event){
             event.preventDefault(); 
+            $("#UpdatingProject").fadeOut();
             $.ajax({ 
                 url: "{{route('Admin_Page')}}/News/PostingEdit", 
                 type: 'POST', 
@@ -145,12 +152,16 @@
                 contentType: false, 
                 processData: false, 
                 success: function (data) {
-                    $("#NotifEditService").fadeIn();
-                    location.reload();
+                    Toast.fire({
+                        icon: 'success',
+                        title: 'Your data has been saved'
+                    })
+                    $("#UpdatingProject").fadeIn();
                 } 
             }); 
             return false; 
         }); 
+
         $("form#FormAddGallery").submit(function(event){
             event.preventDefault(); 
             $.ajax({ 

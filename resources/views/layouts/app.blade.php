@@ -76,11 +76,11 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link fw-bold dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link fw-bold dropdown-toggle text-dark" href="{{url('/')}}/#aboutme" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             @lang('company.navbar.about')
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item text-dark" href="quality">@lang('company.aboutdown.kebijakan')</a></li>
+                            <li><a class="dropdown-item text-dark" href="{{route('quality')}}">@lang('company.aboutdown.kebijakan')</a></li>
                             <li><a class="dropdown-item text-dark" href="#">@lang('company.aboutdown.struktur')</a></li>
                             <li><a class="dropdown-item text-dark" href="#">@lang('company.aboutdown.sertifikat')</a></li>
                         </ul>
@@ -95,7 +95,7 @@
                         <a class="nav-link fw-bold text-dark" href="{{url('/')}}/#Contactperson">@lang('company.navbar.contact')</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold text-dark" href="carier">@lang('company.navbar.carier')</a>
+                        <a class="nav-link fw-bold text-dark" href="{{route('carier')}}">@lang('company.navbar.carier')</a>
                     </li> 
                     @auth
                     <li class="nav-item">
