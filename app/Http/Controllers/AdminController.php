@@ -123,7 +123,7 @@ class AdminController extends Controller
             $insertgallery = DB::table('wme_project_gallery')
                 ->insert([
                     'from_project_id'=>$projectID,
-                    'gallery_name'=>$nameFile,
+                    'gallery_name'=>$replaceNameFile,
                     'gallery_type'=>$typeFile,
                 ]);
         }
