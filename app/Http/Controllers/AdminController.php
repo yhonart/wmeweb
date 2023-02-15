@@ -68,32 +68,34 @@ class AdminController extends Controller
         $projectid = DB::select("SHOW TABLE STATUS LIKE 'wme_project'");
         $nextid = $projectid[0]->Auto_increment;
 
-        $typeFile = $filecover->getClientOriginalExtension();
-        $nameFile = $filecover->getClientOriginalName();
-        $sizeFile = $filecover->getSize();
-
-        $replaceNameFile = str_replace(' ', '_', $nameFile);
-        $filePath = pathinfo($replaceNameFile, PATHINFO_FILENAME);
-        $imgPath = public_path()."/images/portfolio/";
-        $dirimage = $imgPath.$nextid."/";
-
-        if(!file_exists($dirimage)){
-            $mkdir = mkdir($dirimage,0777);
-            $filecover->move($dirimage,$replaceNameFile);
+        if ($filecover<>"") {
+            $typeFile = $filecover->getClientOriginalExtension();
+            $nameFile = $filecover->getClientOriginalName();
+            $sizeFile = $filecover->getSize();
+    
+            $replaceNameFile = str_replace(' ', '_', $nameFile);
+            $filePath = pathinfo($replaceNameFile, PATHINFO_FILENAME);
+            $imgPath = public_path()."/images/portfolio/";
+            $dirimage = $imgPath.$nextid."/";
+    
+            if(!file_exists($dirimage)){
+                $mkdir = mkdir($dirimage,0777);
+                $filecover->move($dirimage,$replaceNameFile);
+            }
+            else{
+                $filecover->move($dirimage,$replaceNameFile);
+            }
+    
+            $insertNews = DB::table('wme_project')
+                ->insert([
+                    'project_name'=>$reqPostingAdd->projectTitle,
+                    'project_desc'=>$reqPostingAdd->projectDesc,
+                    'project_date'=>$reqPostingAdd->projectDate,
+                    'project_customer'=>$reqPostingAdd->clientName,
+                    'lang'=>'id',
+                    'img_cover'=>$replaceNameFile,
+                ]);
         }
-        else{
-            $filecover->move($dirimage,$replaceNameFile);
-        }
-
-        $insertNews = DB::table('wme_project')
-            ->insert([
-                'project_name'=>$reqPostingAdd->projectTitle,
-                'project_desc'=>$reqPostingAdd->projectDesc,
-                'project_date'=>$reqPostingAdd->projectDate,
-                'project_customer'=>$reqPostingAdd->clientName,
-                'lang'=>'id',
-                'img_cover'=>$replaceNameFile,
-            ]);
     }
 
     public function postingAddGallery(Request $addgallery)

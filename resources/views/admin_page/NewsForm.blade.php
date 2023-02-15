@@ -30,7 +30,7 @@
                         <input type="File" name="fileCover" id="fileCover" autocomplete="off" placeholder="Text" class="form-control">
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-success fw-semibold">Submit</button>
+                        <button type="submit" class="btn btn-success fw-semibold" id="BtnAddNews">Submit</button>
                     </div>
                 </form>            
             </div>
@@ -57,6 +57,7 @@
     });
     $(document).ready(function(){
         $("form#formAddNews").submit(function(event){
+            $("#BtnAddNews").fadeOut();
             event.preventDefault(); 
             $.ajax({ 
                 url: "{{route('Admin_Page')}}/News/PostingAddNews", 
@@ -67,7 +68,14 @@
                 contentType: false, 
                 processData: false, 
                 success: function (data) {
-                    $("#NotifEditService").fadeIn();
+                    Toast.fire({
+                        icon: 'success',
+                        title: 'Your data has been saved'
+                    })
+                    $('body').removeClass('modal-open');
+                    $("#extentionModal").modal('hide');
+                    $('.modal-backdrop').remove();
+                    $("#BtnAddNews").fadeIn();
                 } 
             }); 
             return false; 
