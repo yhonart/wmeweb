@@ -25,7 +25,7 @@
                                 <td class="text-right">
                                     <a class="btn btn-info btn-sm" href="{{route('Admin_Page')}}/News/Edit/{{$tbwp->project_id}}"><i class="fas fa-pencil-alt"></i></a>
                                     <a class="btn btn-warning btn-sm" href=""><i class="fas fa-eye"></i></a>
-                                    <a class="btn btn-danger btn-sm" href="{{route('Admin_Page')}}/News/Edit/{{$tbwp->project_id}}"><i class="fas fa-trash-alt"></i></a>
+                                    <a class="btn btn-danger btn-sm DELETENEWS" id-delete="{{$tbwp->project_id}}"><i class="fas fa-trash-alt"></i></a>
                                 </td>
                             </tr>
                         @endforeach
@@ -35,3 +35,28 @@
         </div>
     </div>
 </div>
+<script>
+    $('.DELETENEWS').on('click', function (){
+        let element = $(this);
+        let delInfo = element.attr("id-delete");
+        $.ajax({
+            type:'get',
+            url:"{{route('Admin_Page')}}/News/Delete/"+delInfo,
+            success:function(response){
+                Toast.fire({
+                    icon: 'success',
+                    title: 'Your data has been deleted'
+                })
+                $(".loading-news-table").fadeIn();
+                $.ajax({
+                    type:'get',
+                    url:"{{route('Admin_Page')}}/News/Table",
+                    success:function(response){
+                        $(".loading-news-table").fadeOut();
+                        $(".news-table").html(response);
+                    }
+                })
+            }
+        })
+    })
+</script>

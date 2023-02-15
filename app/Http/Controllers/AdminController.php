@@ -129,4 +129,10 @@ class AdminController extends Controller
             ->where('gallery_id',$iddel)
             ->delete();
     }
+    public function newsdelete($iddelnews)
+    {
+        DB::table('wme_project')
+            ->where('project_id',$iddelnews)
+            ->delete();
+    }
 }
