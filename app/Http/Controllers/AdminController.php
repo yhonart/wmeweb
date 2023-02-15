@@ -35,8 +35,12 @@ class AdminController extends Controller
     public function newsform(){
         $wmeclient = DB::table('wme_client')
             ->get();
+            
+        $wmeproduct = DB::table('wme_product')
+            ->where('lang','id')
+            ->get();
 
-        return view('admin_page/NewsForm',compact('wmeclient'));
+        return view('admin_page/NewsForm',compact('wmeclient','wmeproduct'));
     }
     public function newsedit($IdProject){
 
@@ -89,6 +93,7 @@ class AdminController extends Controller
             $insertNews = DB::table('wme_project')
                 ->insert([
                     'project_name'=>$reqPostingAdd->projectTitle,
+                    'product_category'=>$reqPostingAdd->projectCategory,
                     'project_desc'=>$reqPostingAdd->projectDesc,
                     'project_date'=>$reqPostingAdd->projectDate,
                     'project_customer'=>$reqPostingAdd->clientName,

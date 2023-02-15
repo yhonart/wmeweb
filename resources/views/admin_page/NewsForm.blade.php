@@ -21,6 +21,14 @@
                         </select>
                     </div>
                     <div class="form-group mt-2">
+                        <select name="projectCategory" id="projectCategory" class="form-control">
+                            <option value="">- Project Category -</option>
+                            @foreach($wmeproduct as $wmeprod)
+                                <option value="{{$wmeprod->product_title}}">{{$wmeprod->product_title}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group mt-2">
                         <textarea id="projectDesc" name="projectDesc">
                             Penjelasan Project
                         </textarea>
