@@ -130,7 +130,7 @@
                             <br>
                             Taman Kebalen Blok E1 No. 46
                             <br>
-                            Babetan - Bekasi, Jawa Barat
+                            Babelan - Bekasi, Jawa Barat
                             <br>
                             Telp. 021-22145265 Fax. 021-5908876
                         </address>

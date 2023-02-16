@@ -15,7 +15,7 @@
             "contact" => "Kontak Kami",
             "carier" => "Karir",
         ],
-        "slideteam" => "Tim Yang Handal Dan erpengalaman",
+        "slideteam" => "Tim Yang Handal Dan Berpengalaman",
         "slideteamlead" => "Kami selalu menempatkan tim yang handal di setiap proyek yang kami kerjakan",
         "slideproject" => "Kami berpengalaman dalam seluruh paket pekerjaan mekanikal, electrikal dan jenis pekerjaan lainnya di berbagai jenis proyek dari mulai lokasi perumahan hingga perindustrian",
         "reademore" => "Selengkapnya",

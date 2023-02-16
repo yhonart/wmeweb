@@ -111,56 +111,54 @@
         </div>
         <div class="row mt-2">
             <div class="col-lg-6 col-12 text-center">
-                <p class="fs-7 fw-5" data-aos="fade-right">
+                <div class="fs-7 fw-5" data-aos="fade-right">
                     @php
                         print $aboutus->about_desc;
                     @endphp
-                </p>
+                </div>
             </div>
             <div class="col-lg-6 col-12 text-center">
-                <p class="fs-7 fw-5" data-aos="fade-right">
+                <div class="fs-7 fw-5" data-aos="fade-left">
                     @php
                         print $vision->vision_desc;
                     @endphp
-                </p>
+                </div>
             </div>
         </div>
         <div class="row mt-5">
             <div class="col-12 text-center">
-                <a href="aboutme" class="btn btn-blue-800 fw-bold">@lang('company.readmore')</a>
+                <a href="aboutme" class="btn btn-blue-800 fw-bold" data-aos="fade-up">@lang('company.readmore')</a>
             </div>
         </div>
     </div>
 </section>
-<section id="Services" class="bg-blue-800">
+<section id="Services">
     <div class="container">
         <div class="row mt-5">
             <div class="col-12 text-center">
-                <h4 class="fw-bold text-light title" data-aos="fade-up" style="letter-spacing: 5px;">@lang('company.navbar.service')</h4>
+                <h4 class="fw-bold text-primary title" data-aos="fade-up" style="letter-spacing: 5px;">@lang('company.navbar.service')</h4>
             </div>
-        </div>
-        <div class="row">            
-            @foreach($product as $prod)
-            <div class="col-lg-4 col-12 mb-2">
-                <div class="example-2 card-services mt-4" data-aos="zoom-in-up" id="{{$prod->product_id}}">
-                    <div class="wrapper" style="background: url({{asset('/public/images/services')}}/{{$prod->product_cover}}) center / cover no-repeat;">                        
-                        <div class="data">
-                            <div class="content">
-                                <h5 class="title"><a href="#">{{$prod->product_title}}</a></h5>
-                                    <?php
-                                        print substr($prod->product_content,0,70)."...";
-                                    ?>
-                                <br>
-                                <a href="{{route('services')}}/@lang('company.bahasa')/{{$prod->product_id}}" class="btn btn-blue-800 btn-xs mt-2">@lang('company.readmore')</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>                
-            </div>
-            @endforeach            
-        </div>
+        </div>        
     </div>
 </section>
+<section class="hero-srv">    
+    <div class="card-grid-srv">
+        @foreach($product as $prod)
+        <a class="card-srv" href="{{route('services')}}/@lang('company.bahasa')/{{$prod->product_id}}">
+            <div class="card__background_srv" style="background-image: url({{asset('/public/images/services')}}/{{$prod->product_cover}})"></div>
+            <div class="card__content_srv">
+                <div class="card__category_srv">
+                    <?php
+                        print substr($prod->product_content,0,70)."...";
+                    ?>
+                </div>
+                <h3 class="card__heading_srv">{{$prod->product_title}}</h3>
+            </div>
+        </a>
+        @endforeach
+</div>
+</section>
+
 <section id="Customers">
     <div class="container">
         <div class="row mt-5">
@@ -201,22 +199,27 @@
         </div>
         <div class="row mt-2">
             <div class="col-md-12">
+            
                 <div class="news-and-project">                    
                     @foreach($project as $p)
-                        <div class="card">
+                        <div class="card" data-aos="fade-up">
                             <div class="card-body p-2">
                                 <div class="d-flex justify-content-center">
                                     <img src="{{asset('/public/images/portfolio')}}/{{$p->project_id}}/{{$p->img_cover}}" alt="..." class="card-img-top" style="object-fit:cover;">
                                 </div>
-                                <h5 class="card-title">{{$p->project_name}}</h5>
-                                <a href="{{route('project')}}/detail/{{$p->project_id}}" class="btn btn-blue-800">Selengkapnya</a>
+                                <div class="mt-2">
+                                    <h5 class="card-title">{{$p->project_name}}</h5>
+                                </div>
+                                <div class="mt-2">
+                                    <a href="{{route('project')}}/detail/{{$p->project_id}}" class="btn btn-blue-800">@lang('company.readmore')</a>
+                                </div>
                             </div>
                         </div>
                     @endforeach
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row mt-2">
             <div class="col-12 news-and-project">
                 <a href="project" class="btn btn-warning fw-bold">All Project</a>
             </div>
