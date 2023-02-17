@@ -33,9 +33,7 @@ class HomeController extends Controller
         $wmeclient2 = DB::table('wme_client')
             ->where('client_colom_view','2')
             ->orderBy('client_img_name','asc')
-            ->get();
-        $project = DB::table('wme_project')
-            ->get();
+            ->get();        
         $aboutus = DB::table('wme_about_us')
             ->where([
                 ['lang',$locale],
@@ -50,6 +48,18 @@ class HomeController extends Controller
             ->where('lang',$locale)
             ->get();
 
-        return view('home', compact('wmeclient','wmeclient2','project','aboutus','vision','product'));
+        return view('home', compact('wmeclient','wmeclient2','aboutus','vision','product'));
+    }
+
+    public function projectcategory(Request  $reqCategory)
+    {
+        $category = $reqCategory->Category;
+
+        $project = DB::table('wme_project');
+            if ($category<>'ALL') {
+                $project=$project->where('product_category',$category);
+            }
+            $project=$project->get();
+        return view('redirect.project', compact('project'));
     }
 }

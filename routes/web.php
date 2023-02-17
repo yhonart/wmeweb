@@ -23,6 +23,7 @@ if (file_exists(app_path('Http/Controllers/LocalizationController.php')))
 }
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/home/projectCategory', [App\Http\Controllers\HomeController::class, 'projectcategory']);
 Route::get('/project', [App\Http\Controllers\ProjectController::class, 'listproject'])->name('project');
 Route::get('/project/detail/{id}', [App\Http\Controllers\ProjectController::class, 'detailProject']);
 Route::get('/aboutme', [App\Http\Controllers\PageController::class, 'aboutme'])->name('aboutme');

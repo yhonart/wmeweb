@@ -136,7 +136,7 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-12 text-center">
-                <h4 class="fw-bold text-primary title" data-aos="fade-up" style="letter-spacing: 5px;">@lang('company.navbar.service')</h4>
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;" data-aos="fade-up">@lang('company.navbar.service')</h4>
             </div>
         </div>        
     </div>
@@ -163,7 +163,7 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-12 text-center">
-                <h4 class="fw-bold text-primary title" data-aos="fade-up" style="letter-spacing: 5px;">@lang('company.ourcustomers')</h4>
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;" data-aos="fade-up">@lang('company.ourcustomers')</h4>
             </div>
         </div>
         <div class="row mt-5">
@@ -190,35 +190,56 @@
         </div>
     </div>
 </section>
-<section id="News" class="site-product">
+<hr>
+<section id="News">
     <div class="container">
-        <div class="row mt-5">
-            <div class="col-12 text-center">
-                <h4 class="fw-bold text-warning title" data-aos="fade-up" style="letter-spacing: 5px;">@lang('company.newsandproject')</h4>
-            </div>
+        <div class="row mt-2 d-flex justify-content-center">
+            <div class="col-12">
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;" data-aos="fade-up">@lang('company.newsandproject')</h4>
+                <h5>@lang('company.projectdesc')</h5>
+            </div>            
         </div>
-        <div class="row mt-2">
-            <div class="col-md-12">
-            
-                <div class="news-and-project">                    
-                    @foreach($project as $p)
-                        <div class="card" data-aos="fade-up">
-                            <div class="card-body p-2">
-                                <div class="d-flex justify-content-center">
-                                    <img src="{{asset('/public/images/portfolio')}}/{{$p->project_id}}/{{$p->img_cover}}" alt="..." class="card-img-top" style="object-fit:cover;">
-                                </div>
-                                <div class="mt-2">
-                                    <h5 class="card-title">{{$p->project_name}}</h5>
-                                </div>
-                                <div class="mt-2">
-                                    <a href="{{route('project')}}/detail/{{$p->project_id}}" class="btn btn-blue-800">@lang('company.readmore')</a>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
+    </div>
+    <div class="container-fluid mt-2">
+        <div class="row">
+            <div class="col-12 bg-blue-800">
+                <div class="d-none d-md-block" id="portfolio-flters">
+                    <ul>
+                        <li class="text-white text-capitalize category-project" data-cat="ALL">
+                            All
+                        </li>
+                        @foreach($product as $category)
+                        <li class="text-white text-capitalize category-project" data-cat="{{$category->product_title}}">
+                            {{$category->product_title}}
+                        </li>
+                        @endforeach
+                    </ul>
+                </div>
+                <div class="d-block d-md-none d-flex justify-content-center">
+                    <div class="dropdown m-4">
+                        <button class="btn bg-light dropdown-toggle category-project fw-semibold" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-cat="ALL">
+                            All Category Services
+                        </button>
+                        <ul class="dropdown-menu">
+                            @foreach($product as $category)
+                            <li class="dropdown-item category-project" data-cat="{{$category->product_title}}">{{$category->product_title}}</li>
+                            @endforeach
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container-fluid site-product" id="ListProject">
+        <div class="row">
+            <div class="col-12">
+                <div class="LoadDataProject"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">        
         <div class="row mt-2">
             <div class="col-12 news-and-project">
                 <a href="project" class="btn btn-warning fw-bold">All Project</a>
@@ -226,11 +247,12 @@
         </div>
     </div>
 </section>
+<hr>
 <section id="instagrampost">
     <div class="container">
         <div class="row mt-5">
             <div class="col-12 text-center">
-                <h4 class="fw-bold text-primary title" data-aos="fade-up">Instagram Post</h4>
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;" data-aos="fade-up">Instagram Post</h4>
             </div>
         </div>
         <div class="row">
@@ -269,4 +291,32 @@
         </div>
     </div>
 </section>
+<script>
+    $(function() {
+        let category = 'ALL';
+        $.ajax({
+            type:'POST',
+            url:"{{route('home')}}/projectCategory",
+            data:{Category:category},
+            success:function(response){
+                $('.LoadDataProject').html(response);
+            }
+        })
+    })
+    
+    $(document).ready(function(){
+        $('.category-project').on('click', function(){
+            let element = $(this);
+            let category = element.attr("data-cat");            
+            $.ajax({
+                type:'POST',
+                url:"{{route('home')}}/projectCategory",
+                data:{Category:category},
+                success:function(response){
+                    $('.LoadDataProject').html(response);
+                }
+            })
+        });
+    });
+</script>
 @endsection

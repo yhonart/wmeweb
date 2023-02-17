@@ -43,8 +43,9 @@
         "tinjauan" => "Management Review",
         "manajemenmutudesc" => "<p>A quality management system is implemented, demonstrated, and will be developed to meet customer satisfaction that fulfills every product or service produced.</p>",
         "manajemenmutudescmore" => "<p>Untuk mewujudkan kepuasan pelanggan, kami melakukan beberapa langkah utuk mewujudkan hal tersebut:</p><ul><li>Mengidentifikasi dan mempelajari spesifikasi yang diinginkan pelanggan;</li><li>Menentukan material dan proses yang akan digunakan dalam proses produksi;</li><li>Membuat perintah kerja;</li><li>Pengawasan terhadap proses produksi;</li><li>Pengecekan hasil akhir sebelum penyerahan;</li><li>Membuat laporan penyimpangan dimensi;</li><li>Dokumentasi hasil produksi</li></ul>",
-
         "komitmendesc" => "<p>Director of Wahyu Mustika Engineering PT. has committed to trying to implement and develop a quality management system and continuously make improvements effecti</p>",
         "komitmenmore" => "<ul><li>Dimaksudkan untuk memenuhi tujuan PT. Wahyu Mustika Engineering;</li><li>Didalamnya termasuk komitmen untuk melengkapi persyaratan-persyaratan dan efektifitas perbaikan berkelanjutan dari sistem menejemen mutu;</li><li>Dikomunikasikan dan dimengerti oleh semua karyawan;</li><li>Diperiksa secara terus-menerus;</li></ul><p>Direktur PT. Wahyu Mustika Engineering bertanggung jawab dan memiliki wewenag untuk melakukan aktifitas yang bertujuan untuk menjamin bahwa setiap proses yang telah terjadi sesuai dengan sistem manajemen mutu.</p><p>Mengjamin terjadinya suatu komitmen yang efektif dalam lingkungan PT. Wahyu Mustika Engineering untuk menjamin berjalannya sistem manajemen mutu.</p><p>PT. Wahyu Mustika Engineering menggunakan memo internal dan meeting untuk kelancaran komunikasi dengan karyawan mengenai sistem manajemen mutu.</p>",
+        'projectdesc' => "Check our news & project from our product category",
+
     ];
 ?>

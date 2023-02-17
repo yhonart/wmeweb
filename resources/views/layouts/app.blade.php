@@ -23,8 +23,6 @@
     <meta name="msapplication-TileImage" content="{{asset('/public/images/favicon/ms-icon-144x144.png')}}">
     <meta name="theme-color" content="#ffffff">
     <title>PT. Wahyu Mustika Engineering</title>
-    <!-- Scripts -->    
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">    
     <!-- Styles -->
     <link href="{{ asset('/public/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('/public/scss/style.css') }}" rel="stylesheet">
@@ -32,6 +30,14 @@
     <link rel="stylesheet" type="text/css" href="{{asset('/public/slick/slick.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/public/slick/slick-theme.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/public/icons/font/bootstrap-icons.css')}}">
+    <!-- Scripts -->    
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="{{asset('/public/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('/public/aos-master/dist/aos.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="{{asset('/public/slick/slick.js')}}" type="text/javascript" charset="utf-8"></script>
     <style>
         .putar{
             width: 50%;
@@ -65,10 +71,10 @@
     <nav class="navbar navbar-expand-lg fixed-top bg-white navbar-light shadow-sm">
         <div class="container-fluid">
             <a class="navbar-brand d-none d-md-block" href="{{url('/')}}">
-                <img src="{{asset('/public/images/Brand-WME.png')}}" alt="Bootstrap" height="60">
+                <img src="{{asset('/public/images/Brand-WME.png')}}" alt="Bootstrap" height="60" class="animate__animated animate__fadeInLeft animate__delay-4s">
             </a>
-            <a class="navbar-brand d-block d-md-none" href="#">
-                <img src="{{asset('/public/images/Brand-Mobile.png')}}" alt="Bootstrap" height="60">
+            <a class="navbar-brand d-block d-md-none" href="{{url('/')}}">
+                <img src="{{asset('/public/images/Brand-Mobile-WithText.png')}}" alt="Bootstrap" height="50" class="animate__animated animate__fadeInLeft animate__delay-4s">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -208,14 +214,16 @@
                     <p class="text-center text-primary">&copy; 2022 PT. Wahyu Mustika Engineering</p>            
                 </div>
             </footer>
+            <div class="sm-container">
+                <!-- <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a> -->
+                <a href="https://www.instagram.com/pt.wahyu_mustika_engineering/" class="ig"><i class="fab fa-instagram"></i></a>
+                <!-- <a href="#" class="tw"><i class="fab fa-twitter"></i></a> -->
+                <a href="https://wa.me/6287803124295?text=Hai%20Kami%20tertarik%20dengan%20produk%20dan%20layanan%20anda" class="wa"><i class="fab fa-whatsapp"></i></a>
+            </div>
         </div>
     </div>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="{{asset('/public/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('/public/aos-master/dist/aos.js')}}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="{{asset('/public/slick/slick.js')}}" type="text/javascript" charset="utf-8"></script>
+    <script src="https://kit.fontawesome.com/4486cd9ab5.js" crossorigin="anonymous"></script>	
+    
     <script>        
         $.ajaxSetup({
             headers: {
@@ -226,33 +234,7 @@
             once: true,
             duration: 2000,
         });
-        $(document).ready(function(){
-            $('.news-and-project').slick({
-                ddots: false,
-                infinite: true,
-                speed: 500,
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 2000,
-                arrows: true,
-                responsive: [{
-                    breakpoint: 900,
-                    settings: {
-                        arrows: false,
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                },            
-                {
-                    breakpoint: 400,
-                    settings: {
-                        arrows: false,
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }]
-            });
+        $(document).ready(function(){            
             $('.customers-brand').slick({
                 ddots: false,
                 infinite: true,

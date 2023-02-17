@@ -370,3 +370,80 @@ blockquote{
     word-spacing: 100vw;
 }
   /* End Filter Cards */
+
+/* Portfolio */
+#portfolio-flters {
+    padding: 0;
+    margin: 0 auto 10px auto;
+    list-style: none;
+    text-align: center;
+    font-size:14px;
+    border-radius: 50px;
+    padding: 2px;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#portfolio-flters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #444444;
+    transition: all 0.3s ease-in-out;
+}
+
+#portfolio-flters li:hover,
+#portfolio-flters li.filter-active {
+    color: #49b5e7;
+}
+
+#portfolio-flters li:last-child {
+    margin-right: 0;
+}
+/* End Portfolio */
+
+/* Sosmed */
+.sm-container {
+	position: fixed; /* memberikan posisi fixed pada element, maka posisi tidak akan berubah pada saat di scroll */
+	left: 0; /* memberikan jarak 0, maka posisinya akan berada di sebelah kiri layar */
+	top: 35%; /* memberikan jarak 35% pada bagian atas, agar menu terlihat berada di tengah kiri layar */
+	padding: 5px;
+	border: 1px solid #ddd;
+    z-index: 996;
+}
+
+.sm-container a {
+	display: block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	margin-bottom: 5px;
+	color: #fff;
+}
+
+.sm-container a:last-child {
+	margin-bottom: 0; /* menghilangkan margin bottom pada tag a yang terakhir */
+}
+
+/* memberikan warna background sesuai dengan warna dari sosial media tersebut */
+.sm-container a.fb {
+	background: #3b5999;
+}
+
+.sm-container a.ig {
+	background: #e4405f;
+}
+
+.sm-container a.tw {
+	background: #55acee;
+}
+
+.sm-container a.wa {
+	background: #25D366;
+}
+/* Endsosmed */
