@@ -12,10 +12,10 @@
                 <img src="{{asset('/public/images/slider/manufacture-slider.png')}}" class="w-100 d-none d-sm-block" alt="...">
                 <img src="{{asset('/public/images/slider/manufacture-slider-mobile1.png')}}" class="img-fluid d-block d-sm-none" alt="...">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                    <h5 class="text-white text-uppercase animated bounceInDown">Our Best Service</h5>            
-                    <h1 class="display-1 text-white mb-md-4">Mechanical, Electrical</h1>
-                    <h1 class="display-1 text-white mb-md-4">Manufacture Industry</h1>
-                    <a href="#Contactperson" class="btn btn-primary btn-md">@lang('company.contactnow')</a>
+                    <h5 class="text-white text-uppercase animate__animated animate__zoomIn animate__delay-3s">Our Best Service</h5>            
+                    <h1 class="display-1 text-white mb-md-4 animate__animated animate__zoomIn animate__delay-4s">Mechanical, Electrical</h1>
+                    <h1 class="display-1 text-white mb-md-4 animate__animated animate__zoomIn animate__delay-4s">Manufacture Industry</h1>
+                    <a href="#Contactperson" class="btn btn-primary btn-md animate__animated animate__zoomIn animate__delay-4s">@lang('company.contactnow')</a>
                 </div>                
             </div>
             <div class="carousel-item">
@@ -217,10 +217,11 @@
                 </div>
                 <div class="d-block d-md-none d-flex justify-content-center">
                     <div class="dropdown m-4">
-                        <button class="btn bg-light dropdown-toggle category-project fw-semibold" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-cat="ALL">
-                            All Category Services
+                        <button class="btn bg-light dropdown-toggle fw-semibold" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-cat="ALL">
+                            Category News & Project
                         </button>
                         <ul class="dropdown-menu">
+                            <li class="dropdown-item category-project" data-cat="ALL">All</li>
                             @foreach($product as $category)
                             <li class="dropdown-item category-project" data-cat="{{$category->product_title}}">{{$category->product_title}}</li>
                             @endforeach

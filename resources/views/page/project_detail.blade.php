@@ -7,7 +7,7 @@
         </div>
     </div>
 </div>
-<section>
+<section class="page-bg">
     <div class="container py-5">
         <div class="row g-5">
             <div class="col-lg-12">
