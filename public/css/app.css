@@ -409,7 +409,7 @@ blockquote{
 /* Sosmed */
 .sm-container {
 	position: fixed; /* memberikan posisi fixed pada element, maka posisi tidak akan berubah pada saat di scroll */
-	right: 0; /* memberikan jarak 0, maka posisinya akan berada di sebelah kiri layar */
+	right: 10px; /* memberikan jarak 0, maka posisinya akan berada di sebelah kiri layar */
 	top: 75%; /* memberikan jarak 35% pada bagian atas, agar menu terlihat berada di tengah kiri layar */
 	padding: 5px;
 	border: 1px solid #ddd;
