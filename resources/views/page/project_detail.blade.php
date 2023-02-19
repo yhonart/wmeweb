@@ -8,25 +8,50 @@
     </div>
 </div>
 <section class="page-bg">
-    <div class="container py-5">
+    <div class="container">
         <div class="row g-5">
-            <div class="col-lg-12">
+            <div class="col-lg-4 col-12">
+                <img src="{{asset('/public/images/portfolio')}}/{{$projectDetail->project_id}}/{{$projectDetail->img_cover}}" alt="" srcset="" class="rounded img-fluid">
+            </div>
+            <div class="col-lg-8 col-12">
                 <?php
                     print $projectDetail->project_desc;
                 ?>
             </div>
         </div> 
         <div class="row mt-5">
-            <div class="col-12">
-                <h4 class="fst-italic mb-4 text-primary">Project Gallery</h4>
+            <div class="col-12 border-bottom border-primary">
+                <h4 class="fst-italic mb-4 text-primary">{{$projectDetail->project_name}} Gallery</h4>
             </div>
-            <hr>
-            <div class="col-12 text-center">
+            <div class="col-12 text-center mb-4">
             @foreach($projectGallery as $pgal)
                 <img src="{{asset('public/images/portfolio')}}/{{$id}}/{{$pgal->gallery_name}}" alt="" srcset="" class="img-daz-round">
             @endforeach
             </div>
         </div>       
+        <div class="row">
+            <div class="col-12 border-bottom border-primary">
+                <h4 class="fst-italic mb-4 text-primary">Others {{$projectDetail->product_category}} Categories</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="LoadDataProject"></div>
+            </div>
+        </div>
     </div>
 </section>
+<script>
+    $(function() {
+        let category = 'ALL';
+        $.ajax({
+            type:'POST',
+            url:"{{route('home')}}/projectCategory",
+            data:{Category:category},
+            success:function(response){
+                $('.LoadDataProject').html(response);
+            }
+        })
+    })
+</script>
 @endsection

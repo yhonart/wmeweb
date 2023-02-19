@@ -266,7 +266,7 @@
     </div>
 </section>
 <section id="Contactperson">
-    <div class="container bg-blue-800 site-team">
+    <div class="container bg-blue-800 site-team mb-4">
         <div class="row mt-5">
             <div class="col-lg-8 col-12">
                 <h3 class="text-light title ms-4">@lang('company.contactquestion')</h3>

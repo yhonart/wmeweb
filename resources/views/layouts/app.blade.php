@@ -90,9 +90,11 @@
                             @lang('company.navbar.about')
                         </a>
                         <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-dark" href="{{route('aboutme')}}">@lang('company.navbar.about')</a></li>
                             <li><a class="dropdown-item text-dark" href="{{route('quality')}}">@lang('company.aboutdown.kebijakan')</a></li>
                             <li><a class="dropdown-item text-dark" href="#">@lang('company.aboutdown.struktur')</a></li>
                             <li><a class="dropdown-item text-dark" href="#">@lang('company.aboutdown.sertifikat')</a></li>
+                            <li><a class="dropdown-item text-dark" href="#">Workshop Mechine</a></li>
                         </ul>
                     </li>                    
                     <li class="nav-item">
@@ -123,7 +125,7 @@
         </div>
     </nav>
     @yield('content')
-    <footer class="py-5 mt-4 footer-wme">
+    <footer class="py-5 footer-wme">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-12 mb-2">
