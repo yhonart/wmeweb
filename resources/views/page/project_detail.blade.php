@@ -43,7 +43,7 @@
 </section>
 <script>
     $(function() {
-        let category = 'ALL';
+        let category = '{{$projectDetail->product_category}}';
         $.ajax({
             type:'POST',
             url:"{{route('home')}}/projectCategory",
