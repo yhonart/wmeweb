@@ -147,8 +147,8 @@
                     </address>
                     <p class="fs-6 fw-bold">Contact Person</p>
                     <ul>
-                        <li><span class="fw-bold">Mustakim </span>: +62813 1045 5332</li>
-                        <li><span class="fw-bold">Imam </span>: +62813 9870 0989</li>
+                        <li><span class="fw-bold">Mustakim </span>: +62 819 1121 6296</li>
+                        <li><span class="fw-bold">Imam </span>: +62 813 9870 0989</li>
                     </ul>
                 </div>
                 <div class="col-md-8 col-12">
