@@ -221,13 +221,12 @@
         <div class="d-flex flex-column flex-sm-row justify-content-center border-top mt-2">
             <p class="text-center text-white">&copy; 2022 PT. Wahyu Mustika Engineering</p>            
         </div>
-
     </footer>
     <div class="sm-container">
         <!-- <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a> -->
         <a href="https://www.instagram.com/pt.wahyu_mustika_engineering/" class="ig"><i class="fab fa-instagram"></i></a>
         <!-- <a href="#" class="tw"><i class="fab fa-twitter"></i></a> -->
-        <a href="https://wa.me/6287803124295?text=Hai%20Kami%20tertarik%20dengan%20produk%20dan%20layanan%20anda" class="wa"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://wa.me/6281911216296?text=Hai%20Kami%20tertarik%20dengan%20produk%20dan%20layanan%20anda." class="wa"><i class="fab fa-whatsapp"></i></a>
     </div>    
     <script src="https://kit.fontawesome.com/4486cd9ab5.js" crossorigin="anonymous"></script>	    
     <script>        
