@@ -48,7 +48,11 @@ class HomeController extends Controller
             ->where('lang',$locale)
             ->get();
 
-        return view('home', compact('wmeclient','wmeclient2','aboutus','vision','product'));
+        $ournews = DB::table('wme_project')
+            ->where('project_type','2')
+            ->get();
+
+        return view('home', compact('wmeclient','wmeclient2','aboutus','vision','product','ournews'));
     }
 
     public function projectcategory(Request  $reqCategory)
@@ -56,6 +60,7 @@ class HomeController extends Controller
         $category = $reqCategory->Category;
 
         $project = DB::table('wme_project');
+            $project=$project->where('project_type','1');
             if ($category<>'ALL') {
                 $project=$project->where('product_category',$category);
             }

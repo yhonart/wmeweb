@@ -97,6 +97,7 @@ class AdminController extends Controller
                     'project_desc'=>$reqPostingAdd->projectDesc,
                     'project_date'=>$reqPostingAdd->projectDate,
                     'project_customer'=>$reqPostingAdd->clientName,
+                    'project_type'=>$reqPostingAdd->projectType,
                     'lang'=>'id',
                     'img_cover'=>$replaceNameFile,
                 ]);

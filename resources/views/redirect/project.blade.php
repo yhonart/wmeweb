@@ -1,6 +1,6 @@
 <div class="news-and-project mt-2 ">                    
     @foreach($project as $p)
-        <div class="card mb-4 mt-4" data-aos="fade-up">
+        <div class="card m-2 border-0 data-aos="fade-up">
             <div class="card-body p-2">
                 <div class="d-flex justify-content-center">
                     <img src="{{asset('/public/images/portfolio')}}/{{$p->project_id}}/{{$p->img_cover}}" alt="..." class="card-img-top" style="object-fit:cover;">

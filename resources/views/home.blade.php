@@ -56,6 +56,11 @@
         </div>
         <div class="row">            
             <div class="col-lg-6 col-12 text-center" style="background: url({{asset('/public/images/tools.jpg')}}) center / cover no-repeat;">
+                <div class="row d-flex justify-content-center mt-2 mb-5">
+                    <div class="col-8">
+                        <img src="{{asset('public/images/ISO-1.png')}}" alt="" srcset="" class="img-fluit img-thumbnail">
+                    </div>
+                </div>
                 <div class="row d-flex justify-content-center mt-5">
                     <div class="col-8">
                         <div class="card bg-warning" data-aos="fade-right">                            
@@ -83,6 +88,7 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
             <div class="col-lg-6 text-left mt-5">
                 <h4 class="fst-italic mb-4 text-primary" data-aos="fade-right">@lang('company.experienced')</h4>
@@ -106,7 +112,7 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-12 text-center">
-                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;" data-aos="fade-up">@lang('company.navbar.about')</h4>
+                <h2 class="text-primary text-uppercase" style="letter-spacing: 5px;" data-aos="fade-up">@lang('company.navbar.about')</h2>
             </div>
         </div>
         <div class="row mt-2">
@@ -136,7 +142,7 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-12 text-center">
-                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;" data-aos="fade-up">@lang('company.navbar.service')</h4>
+                <h2 class="text-primary text-uppercase" style="letter-spacing: 5px;" data-aos="fade-up">@lang('company.navbar.service')</h2>
             </div>
         </div>        
     </div>
@@ -163,7 +169,7 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-12 text-center">
-                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;" data-aos="fade-up">@lang('company.ourcustomers')</h4>
+                <h2 class="text-primary text-uppercase" style="letter-spacing: 5px;" data-aos="fade-up">@lang('company.ourcustomers')</h2>
             </div>
         </div>
         <div class="row mt-5">
@@ -191,11 +197,11 @@
     </div>
 </section>
 <hr>
-<section id="News">
+<section id="Projects">
     <div class="container">
         <div class="row mt-2 d-flex justify-content-center">
             <div class="col-12">
-                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;" data-aos="fade-up">@lang('company.newsandproject')</h4>
+                <h2 class="text-primary text-uppercase" style="letter-spacing: 5px;" data-aos="fade-up">@lang('company.newsandproject')</h2>
                 <h5>@lang('company.projectdesc')</h5>
             </div>            
         </div>
@@ -237,13 +243,41 @@
                 <div class="LoadDataProject"></div>
             </div>
         </div>
-    </div>
-</section>
-<section>
-    <div class="container">        
         <div class="row mt-2">
             <div class="col-12 news-and-project">
                 <a href="project" class="btn btn-warning fw-bold">All Project</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="Projects">
+    <div class="container">
+        <div class="row mt-2 d-flex justify-content-center">
+            <div class="col-12">
+                <h2 class="text-primary text-uppercase" style="letter-spacing: 5px;" data-aos="fade-up">@lang('company.ournews')</h2>
+            </div>            
+        </div>
+        <div class="row">
+            <div class="col-12">
+            <div class="news-slider mt-2 ">                    
+                @foreach($ournews as $p)
+                    <div class="card m-4 border-1" data-aos="fade-up">
+                        <div class="card-body p-2">
+                            <div class="d-flex justify-content-center">
+                                <img src="{{asset('/public/images/portfolio')}}/{{$p->project_id}}/{{$p->img_cover}}" alt="..." class="card-img-top">
+                            </div>
+                            <div class="mt-2">
+                                <h5 class="card-title">{{$p->project_name}}</h5>
+                                <p>{{substr($p->project_desc,20)}} ....</p>
+                            </div>
+                            <div class="mt-2">
+                                <a href="{{route('project')}}/detail/{{$p->project_id}}" class="btn btn-blue-800">@lang('company.readmore')</a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
             </div>
         </div>
     </div>
@@ -317,6 +351,33 @@
                     $('.LoadDataProject').html(response);
                 }
             })
+        });
+
+        $('.news-slider').not('.slick-initialized').slick({
+            ddots: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            arrows: true,
+            responsive: [{
+                breakpoint: 900,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },            
+            {
+                breakpoint: 400,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }]
         });
     });
 </script>

@@ -3,30 +3,53 @@
         <div class="card card-primary">            
             <div class="card-body">
                 <form id="formAddNews">
-                    <div class="form-group">
-                        <input type="Text" name="projectTitle" id="projectTitle" autocomplete="off" placeholder="Title" class="form-control">
-                    </div>                    
-                    <div class="input-group date" id="DateProject" data-target-input="nearest">
-                        <input type="text" name="projectDate" class="form-control datetimepicker-input" data-target="#DateProject"/>
-                        <div class="input-group-append" data-target="#DateProject" data-toggle="datetimepicker">
-                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Type</label>
+                        <div class="col-sm-8">
+                            <select name="projectType" id="projectType" class="form-control">
+                                <option value="1">Project</option>
+                                <option value="2">News</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="form-group mt-2">
-                        <select name="clientName" id="clientName" class="form-control">
-                            <option value="">- Select Client -</option>
-                            @foreach($wmeclient as $wc)
-                                <option value="{{$wc->client_id}}">{{$wc->client_name}}</option>
-                            @endforeach
-                        </select>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Title</label>
+                        <div class="col-sm-8">
+                            <input type="Text" name="projectTitle" id="projectTitle" autocomplete="off" placeholder="Title" class="form-control">
+                        </div>
                     </div>
-                    <div class="form-group mt-2">
-                        <select name="projectCategory" id="projectCategory" class="form-control">
-                            <option value="">- Project Category -</option>
-                            @foreach($wmeproduct as $wmeprod)
-                                <option value="{{$wmeprod->product_title}}">{{$wmeprod->product_title}}</option>
-                            @endforeach
-                        </select>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Date Project</label>
+                        <div class="col-sm-8">
+                            <div class="input-group date" id="DateProject" data-target-input="nearest">
+                                <input type="text" name="projectDate" class="form-control datetimepicker-input" data-target="#DateProject"/>
+                                <div class="input-group-append" data-target="#DateProject" data-toggle="datetimepicker">
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Customer Name</label>
+                        <div class="col-sm-8">
+                            <select name="clientName" id="clientName" class="form-control">
+                                <option value="">- Select Client -</option>
+                                @foreach($wmeclient as $wc)
+                                    <option value="{{$wc->client_id}}">{{$wc->client_name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Product Category</label>
+                        <div class="col-sm-8">
+                            <select name="projectCategory" id="projectCategory" class="form-control">
+                                <option value="">- Project or News Category -</option>
+                                @foreach($wmeproduct as $wmeprod)
+                                    <option value="{{$wmeprod->product_title}}">{{$wmeprod->product_title}}</option>
+                                @endforeach
+                            </select>
+                        </div>
                     </div>
                     <div class="form-group mt-2">
                         <textarea id="projectDesc" name="projectDesc">

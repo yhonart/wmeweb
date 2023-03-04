@@ -34,7 +34,8 @@
         "thank" => "Thank you for your contribution.",
         "address" => "Alamat",
         "ourcustomers" => "Pelanggan Kami",
-        "newsandproject" => "Berita & Gallery Proyek",
+        "newsandproject" => "Proyek Kami",
+        "ournews" => "Berita",
         "contactquestion" => "Anda memiliki pertanyaan ?",
         "contactquestiondesc" => "Tim kami siap memberikan penjelasannya. Hubungi kami melalui whatsaap atau email kami.",
         "qms" => "System Manajemen Mutu",
@@ -45,6 +46,6 @@
         "manajemenmutudescmore" => "<p>Untuk mewujudkan kepuasan pelanggan, kami melakukan beberapa langkah utuk mewujudkan hal tersebut:</p><ul><li>Mengidentifikasi dan mempelajari spesifikasi yang diinginkan pelanggan;</li><li>Menentukan material dan proses yang akan digunakan dalam proses produksi;</li><li>Membuat perintah kerja;</li><li>Pengawasan terhadap proses produksi;</li><li>Pengecekan hasil akhir sebelum penyerahan;</li><li>Membuat laporan penyimpangan dimensi;</li><li>Dokumentasi hasil produksi</li></ul>",
         "komitmendesc" => "<p>Director of Wahyu Mustika Engineering PT. has a commitment to try to implement and develop a quality management system and continuously and continuously make improvements effectively :</p>",
         "komitmenmore" => "<ul><li>Intended to fulfill a purpose Wahyu Mustika Engineering PT.;</li><li>It includes a commitment to complete the requirements and the effectiveness of the continuous improvement of the quality management system;</li><li>Communicated and understood by all employees;</li><li>Constantly checked;</li></ul><p>Director Wahyu Mustika Engineering PT. is responsible and has the authority to carry out activities aimed at ensuring that every process that has occurred is in accordance with the quality management system.</p><p>Ensuring the occurrence of an effective commitment within the Wahyu Mustika Engineering PT. to ensure the quality management system runs.</p><p>Wahyu Mustika Engineering PT. using internal memos and meetings for smooth communication with employees regarding the quality management system.</p>",
-        'projectdesc' => "Periksa berita & proyek kami dari kategori produk kami",
+        'projectdesc' => "Periksa proyek kami dari kategori produk kami",
     ];
 ?>
