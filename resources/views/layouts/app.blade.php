@@ -107,7 +107,7 @@
                         <a class="nav-link fw-bold text-dark animate__animated animate__fadeInLeft animate__delay-3s" href="{{url('/')}}/#Contactperson">@lang('company.navbar.contact')</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold text-dark animate__animated animate__fadeInLeft animate__delay-3s" href="{{route('carier')}}">@lang('company.navbar.carier')</a>
+                        <a class="nav-link fw-bold text-dark animate__animated animate__fadeInLeft animate__delay-3s" href="{{route('carieers')}}">@lang('company.navbar.carier')</a>
                     </li> 
                     @auth
                     <li class="nav-item">

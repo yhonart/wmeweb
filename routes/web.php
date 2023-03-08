@@ -35,7 +35,7 @@ Route::get('/qualityPolice', [App\Http\Controllers\PageController::class, 'detai
 
 
 // Carier
-Route::get('/carier', [App\Http\Controllers\CarierController::class, 'indexcarier'])->name('carier');
+Route::get('/carieers', [App\Http\Controllers\CarierController::class, 'indexcarier'])->name('carieers');
 
 
 // Route DIR
