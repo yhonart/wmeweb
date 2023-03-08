@@ -30,7 +30,7 @@
                             <li class="border-bottom fs-5">Menguasai Autocad / Solidwork menjadi nilai tambah</li>
                             <li class="border-bottom fs-5">Diutamakan domisili cilegon</li>
                         </ul>
-                        <h5>Pendaftaran melalui : <a href="http://bit.ly/3SVoYRc" target="_blank" rel="noopener noreferrer">bit.ly/3SVoYRc</a>  <span class="fw-bold">Sebelum tanggal 25 Maret 2023</span></h5>
+                        <h5>Pendaftaran melalui : <a href="http://bit.ly/3YsOy1g" target="_blank" rel="noopener noreferrer">bit.ly/3YsOy1g</a>  <span class="fw-bold">Sebelum tanggal 25 Maret 2023</span></h5>
                     </div>
                 </div>
             </div>         
